@@ -137,8 +137,7 @@
     <ClCompile Include="GameL\UserData.cpp" />
     <ClCompile Include="GameL\WinInputs.cpp" />
     <ClCompile Include="SceneMain.cpp" />
-    <ClCompile Include="SceneTitle.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="SelectScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameHead.h" />
