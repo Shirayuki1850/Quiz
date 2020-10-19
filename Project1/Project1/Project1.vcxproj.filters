@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\Title">
+      <UniqueIdentifier>{ec8f4e0b-3f6b-42bb-92f4-4fdc8a40e9ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -60,6 +63,9 @@
     <ClCompile Include="GameL\WinInputs.cpp">
       <Filter>リソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="SceneTitle.cpp">
+      <Filter>ソース ファイル\Title</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameHead.h">
@@ -103,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="GameL\WinInputs.h">
       <Filter>リソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneTItle.h">
+      <Filter>ソース ファイル\Title</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
