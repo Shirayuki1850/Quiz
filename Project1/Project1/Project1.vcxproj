@@ -124,7 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="SceneMain.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="SelectScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameHead.h" />
