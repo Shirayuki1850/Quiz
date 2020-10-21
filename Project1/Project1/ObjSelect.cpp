@@ -1,3 +1,7 @@
+//STLデバッグ機能をOFFにする
+#define _SECURE_SCL (0)
+#define _HAS_ITERATOR_DEBUGGING (0)
+
 //使用するヘッダーファイル
 #include"GameL/DrawTexture.h"
 #include"GameL/WinInputs.h"
@@ -6,6 +10,7 @@
 
 #include"ObjSelect.h"
 #include "SceneMain.h"
+#include "GameHead.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -28,6 +33,12 @@ void CObjSelect::Action()
 
 	//マウスのボタンの状態
 	m_mou_l = Input::GetMouButtonL();
+
+	//マウスの位置とクリックする場所で当たり判定
+	/*if ()
+	{
+
+	}*/
 }
 
 //ドロー
@@ -36,15 +47,15 @@ void CObjSelect::Draw()
 	float c[4] = { 1,1,1,1 };
 
    //説明
-   Font::StrDraw(L"ジャンルを選択してください\n", 200, 250, 40, c);
+   Font::StrDraw(L"ジャンルを選択してください", 185, 50, 30, c);
    
    //ジャンルをクリックする場所
-   Font::StrDraw(L"国語\n", 230, 400, 30, c);
+   Font::StrDraw(L"国語", 100, 200, 30, c);
 
-   Font::StrDraw(L"外国語\n", 230, 400, 30, c);
+   Font::StrDraw(L"外国語", 100, 300, 30, c);
 
-   Font::StrDraw(L"社会\n", 230, 400, 30, c);
+   Font::StrDraw(L"社会", 100, 400, 30, c);
 
-   Font::StrDraw(L"ゲーム関連\n", 230, 400, 30, c);
+   Font::StrDraw(L"ゲーム関連", 100, 500, 30, c);
 	
 }
