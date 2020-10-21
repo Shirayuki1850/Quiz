@@ -15,4 +15,5 @@ public:
 	void Scene();     //ゲームタイトルの実行中メソッド
 
 private:
+
 };

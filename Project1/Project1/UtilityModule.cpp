@@ -76,6 +76,7 @@ bool CheckWindow(float pos_x, float pos_y, float window_x, float window_y, float
 //‚‚³‚Æ•‚©‚ç’¼ŠpOŠpŒ`‚ª‚ ‚é‚Æ‰¼’è‚µ‚»‚ÌŠp“x‚ğ‹‚ß‚éB
 float GetAtan2Angle(float w, float h)
 {
+	
 	//atan2‚ÅŠp“x‚ğ‹‚ß‚é
 	float r = atan2(h, w) * 180.0f / 3.14;
 
@@ -84,8 +85,10 @@ float GetAtan2Angle(float w, float h)
 	{
 		r = 360 - abs(r);
 	}
+	
 
 	return r;
+	
 }
 
 
