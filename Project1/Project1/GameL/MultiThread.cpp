@@ -16,6 +16,7 @@ bool CMultiThread::GetEnd()
 void CMultiThread::Init( void(*game_sub)() )
 {
 	m_handoru_game = new thread(GameThread, (void *)game_sub);
+	execution.store(true);
 }
 
 //íœ
