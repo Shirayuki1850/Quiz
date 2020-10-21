@@ -138,6 +138,7 @@
     <ClCompile Include="GameL\WinInputs.cpp" />
     <ClCompile Include="Objmouse.cpp" />
     <ClCompile Include="ObjSelect.cpp" />
+    <ClCompile Include="ObjTitle.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneTitle.cpp" />
     <ClCompile Include="SelectScene.cpp" />
@@ -156,8 +157,12 @@
     <ClInclude Include="GameL\UserData.h" />
     <ClInclude Include="GameL\WinInputs.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="Objmouse.h" />
+    <ClInclude Include="ObjSelect.h" />
+    <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneTItle.h" />
+    <ClInclude Include="SelectScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

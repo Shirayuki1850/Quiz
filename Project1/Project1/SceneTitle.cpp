@@ -5,6 +5,7 @@
 //GameLで使用するヘッダー
 #include "GameL/SceneObjManager.h"
 #include "GameL/\DrawFont.h"
+#include "GameL/WinInputs.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -12,6 +13,7 @@ using namespace GameL;
 //使用するヘッダー
 #include "SceneMain.h"
 #include "GameHead.h"
+#include "ObjTitle.h"
 
 //コンストラクタ
 CSceneTitle::CSceneTitle()

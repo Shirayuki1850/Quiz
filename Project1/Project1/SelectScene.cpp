@@ -20,7 +20,7 @@ CSelectScene::CSelectScene()
 }
 
 //デストラクタ
-CSelectScene::CSelectScene()
+CSelectScene::~CSelectScene()
 {
 
 }

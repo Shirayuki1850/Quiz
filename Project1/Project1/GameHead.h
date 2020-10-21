@@ -50,11 +50,17 @@ struct UserData
 //------------------------------------------------
 
 //ゲームシーンオブジェクトヘッダ------------------
-//#include"ObjHero.h"
+#include "ObjTitle.h"
+#include "ObjSelect.h"
+#include "Objmouse.h"
+
 //------------------------------------------------
 
 //ゲームシーンクラスヘッダ------------------------
 #include "SceneMain.h"
+#include "SceneTitle.h"
+#include "SelectScene.h"
+
 
 //-----------------------------------------------
 
