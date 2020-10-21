@@ -1,5 +1,5 @@
 //使用するヘッダーファイル
-#include "GameL/\DrawFont.h"
+#include "GameL/DrawFont.h"
 #include "GameL/WinInputs.h"
 
 #include "GameHead.h"
@@ -24,5 +24,7 @@ void CObjTitle::Action()
 void CObjTitle::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
-	//Font::StrDraw(L"繋がりクイズ", 0, 0, 32, c);
+	Font::StrDraw(L"繋がりクイズ", 200, 220, 64, c);
+
+	Font::StrDraw(L"Click Start", 225, 450, 64, c);
 }

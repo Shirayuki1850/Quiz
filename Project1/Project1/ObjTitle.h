@@ -5,7 +5,7 @@
 using namespace GameL;
 
 //オブジェクト：タイトル
-class CObjTitle :public CObj//Title
+class CObjTitle :public CObj
 {
 public:
 	CObjTitle() {};
