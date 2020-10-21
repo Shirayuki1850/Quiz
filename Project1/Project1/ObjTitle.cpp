@@ -11,12 +11,21 @@ using namespace GameL;
 //イニシャライズ
 void CObjTitle::Init()
 {
-
+	m_mou_x = 0.0f;
+	m_mou_y = 0.0f;
+	m_mou_l = false;
 }
 
 //アクション
 void CObjTitle::Action()
 {
+	//マウスの位置を取得
+	m_mou_x = (float)Input::GetPosX();
+	m_mou_y = (float)Input::GetPosY();
+
+	//マウスのボタンの状態
+	m_mou_l = Input::GetMouButtonL();
+
 
 }
 
