@@ -138,10 +138,7 @@
     <ClCompile Include="GameL\WinInputs.cpp" />
     <ClCompile Include="Objmouse.cpp" />
     <ClCompile Include="SceneMain.cpp" />
-    <ClCompile Include="Source.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="UtilityModule.cpp" />
+    <ClCompile Include="SelectScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameHead.h" />
@@ -159,7 +156,6 @@
     <ClInclude Include="main.h" />
     <ClInclude Include="Objmouse.h" />
     <ClInclude Include="SceneMain.h" />
-    <ClInclude Include="UtilityModule.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
