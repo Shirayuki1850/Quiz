@@ -12,5 +12,4 @@ public:
 	void InitScene();
 	void Scene();
 private:
-	int m_map;
 };
