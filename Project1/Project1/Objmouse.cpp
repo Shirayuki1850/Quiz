@@ -48,7 +48,7 @@ void CObjmouse::Action()
 	m_mou_py = (float)Input::GetPosY();
 	if (time >= 1)
 	{
-		m_r += 2.0f;
+		//m_r +=50.0f;
 
 	}
 
