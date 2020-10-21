@@ -1,3 +1,7 @@
+//STLデバッグ機能をOFFにする
+#define _SECURE_SCL (0)
+#define _HAS_ITERATOR_DEBUGGING (0)
+
 //使用するヘッダーファイル
 #include"GameL/DrawTexture.h"
 #include"GameL/WinInputs.h"
@@ -6,6 +10,7 @@
 
 #include"ObjSelect.h"
 #include "SceneMain.h"
+#include "GameHead.h"
 
 //使用するネームスペース
 using namespace GameL;
