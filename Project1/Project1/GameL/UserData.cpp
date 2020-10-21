@@ -49,7 +49,7 @@ void CUserData::Seve()
 
 }
 
-unique_ptr<wchar_t> CUserData::ExternalDataOpen(wchar_t* file_name,int* size)
+unique_ptr<wchar_t> CUserData::ExternalDataOpen(const wchar_t* file_name,int* size)
 {
 	
 	int  s=0;
