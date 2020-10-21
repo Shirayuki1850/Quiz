@@ -24,5 +24,7 @@ void CObjTitle::Action()
 void CObjTitle::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
-	//Font::StrDraw(L"繋がりクイズ", 0, 0, 32, c);
+	Font::StrDraw(L"繋がりクイズ", 230, 400, 32, c);
+
+	Font::StrDraw(L"Click Start", 200, 400, 32, c);
 }

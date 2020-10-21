@@ -31,10 +31,10 @@ CSceneTitle::~CSceneTitle()
 void CSceneTitle::InitScene()
 {
 	//出力させる文字のグラフィック作成
-	//Font::SetStrTex(L"繋がりクイズ");
+	Font::SetStrTex(L"繋がりクイズ");
 
 	//タイトルオブジェクト作成
-	//CObjTitle*obj = new CObjTitle();     //タイトルオブジェクト作成
+	CObjTitle*obj = new CObjTitle();     //タイトルオブジェクト作成
 }
 
 //ゲームメイン実行中メソッド
