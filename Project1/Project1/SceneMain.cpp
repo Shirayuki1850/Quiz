@@ -30,9 +30,12 @@ CSceneMain::~CSceneMain()
 //ゲームメイン初期化メソッド
 void CSceneMain::InitScene()
 {
+	CObjMain*p = new CObjMain();
+	Objs::InsertObj(p, OBJ_MAIN, 1);
+
 	//カーソル作成
 	CObjmouse* obj = new CObjmouse();
-	Objs::InsertObj(obj, OBJ_MOUSE, 1);
+	Objs::InsertObj(obj, OBJ_MOUSE, 2);
 	
 }
 

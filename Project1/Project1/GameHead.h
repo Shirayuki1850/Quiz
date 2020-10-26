@@ -8,6 +8,7 @@ enum OBJ_NAME
 	//OBJ_ÅõÅõÇ∆ï\ãL
 	OBJ_TITLE,
 	OBJ_MOUSE,
+	OBJ_MAIN,
 };
 //------------------------------------------------
 
@@ -54,6 +55,7 @@ struct UserData
 #include "ObjTitle.h"
 #include "ObjSelect.h"
 #include "Objmouse.h"
+#include "ObjMain.h"
 
 //------------------------------------------------
 
