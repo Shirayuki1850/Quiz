@@ -19,7 +19,6 @@ using namespace GameL;
 #include "GameHead.h"
 
 
-
 //コンストラクタ
 CSceneMain::CSceneMain()
 {
@@ -41,12 +40,26 @@ void CSceneMain::InitScene()
 	//カーソル作成
 	CObjmouse* obj = new CObjmouse();
 	Objs::InsertObj(obj, OBJ_MOUSE, 2);
+
+	FILE* fp;
+
+	//	読み込みモードでファイルを開く
+	fopen_s(&fp, "Quiz1.txt", "rb");
+	for (int i = 0; i < 100; i++)
+		fgetws(str1[i], 99, fp);
+
+	fclose(fp);
 	
 }
 
 //ゲームメイン実行化メソッド
 void CSceneMain::Scene()
 {
-
+	for (int i = 0; i < 100; i++)
+	{
+		swprintf(str2, L"%s", str1[i]);
+		Font::StrDraw(str2, 0, 25 * i, 25, c);
+	}
+		
 }
 
