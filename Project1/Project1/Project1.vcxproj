@@ -77,6 +77,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -137,10 +138,14 @@
     <ClCompile Include="GameL\SetWindow.cpp" />
     <ClCompile Include="GameL\UserData.cpp" />
     <ClCompile Include="GameL\WinInputs.cpp" />
+    <ClCompile Include="ObjMain.cpp" />
     <ClCompile Include="Objmouse.cpp" />
     <ClCompile Include="ObjSelect.cpp" />
     <ClCompile Include="ObjTitle.cpp" />
     <ClCompile Include="SceneMain.cpp" />
+    <ClCompile Include="SceneQ.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="SceneTitle.cpp" />
     <ClCompile Include="SelectScene.cpp" />
     <ClCompile Include="UtilityModule.cpp" />
@@ -159,10 +164,14 @@
     <ClInclude Include="GameL\UserData.h" />
     <ClInclude Include="GameL\WinInputs.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="ObjMain.h" />
     <ClInclude Include="Objmouse.h" />
     <ClInclude Include="ObjSelect.h" />
     <ClInclude Include="ObjTitle.h" />
     <ClInclude Include="SceneMain.h" />
+    <ClInclude Include="SceneQ.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="SceneTItle.h" />
     <ClInclude Include="SelectScene.h" />
     <ClInclude Include="UtilityModule.h" />

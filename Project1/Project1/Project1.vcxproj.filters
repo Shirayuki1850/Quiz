@@ -16,6 +16,9 @@
     <Filter Include="ソース ファイル\Title">
       <UniqueIdentifier>{ec8f4e0b-3f6b-42bb-92f4-4fdc8a40e9ce}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Question">
+      <UniqueIdentifier>{ccd8c9ac-74db-49ca-9632-8442dfa4f3df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SceneMain.cpp">
@@ -76,6 +79,12 @@
       <Filter>ソース ファイル\Title</Filter>
     </ClCompile>
     <ClCompile Include="UtilityModule.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneQ.cpp">
+      <Filter>ソース ファイル\Question</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjMain.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -139,6 +148,12 @@
     </ClInclude>
     <ClInclude Include="UtilityModule.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjMain.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneQ.h">
+      <Filter>ソース ファイル\Question</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

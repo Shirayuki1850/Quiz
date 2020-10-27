@@ -8,6 +8,7 @@ enum OBJ_NAME
 	//OBJ_○○と表記
 	OBJ_TITLE,
 	OBJ_MOUSE,
+	OBJ_MAIN,
 };
 //------------------------------------------------
 
@@ -54,6 +55,7 @@ struct UserData
 #include "ObjTitle.h"
 #include "ObjSelect.h"
 #include "Objmouse.h"
+#include "ObjMain.h"
 
 //------------------------------------------------
 
@@ -67,5 +69,5 @@ struct UserData
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
-#define SET_GAME_START  CSelectScene
+#define SET_GAME_START  CSceneTitle
 //-----------------------------------------------

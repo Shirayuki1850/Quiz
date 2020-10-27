@@ -6,6 +6,9 @@
 #include "GameL/UserData.h"
 #include"GameL\DrawTexture.h"
 #include"GameL\SceneObjManager.h"
+#include"GameL/DrawFont.h"
+#include<math.h>
+#include<stdio.h>
 
 
 //使用するネームスペース
@@ -14,6 +17,7 @@ using namespace GameL;
 //使用ヘッダー
 #include "SceneMain.h"
 #include "GameHead.h"
+
 
 //コンストラクタ
 CSceneMain::CSceneMain()
@@ -30,15 +34,32 @@ CSceneMain::~CSceneMain()
 //ゲームメイン初期化メソッド
 void CSceneMain::InitScene()
 {
+	CObjMain*p = new CObjMain();
+	Objs::InsertObj(p, OBJ_MAIN, 1);
+
 	//カーソル作成
 	CObjmouse* obj = new CObjmouse();
-	Objs::InsertObj(obj, OBJ_MOUSE, 1);
+	Objs::InsertObj(obj, OBJ_MOUSE, 2);
+
+	FILE* fp;
+
+	//	読み込みモードでファイルを開く
+	fopen_s(&fp, "Quiz1.txt", "rb");
+	for (int i = 0; i < 100; i++)
+		fgetws(str1[i], 99, fp);
+
+	fclose(fp);
 	
 }
 
 //ゲームメイン実行化メソッド
 void CSceneMain::Scene()
 {
-
+	for (int i = 0; i < 100; i++)
+	{
+		swprintf(str2, L"%s", str1[i]);
+		Font::StrDraw(str2, 0, 25 * i, 25, c);
+	}
+		
 }
 
