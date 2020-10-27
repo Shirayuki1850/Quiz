@@ -4,6 +4,7 @@
 
 #include "GameHead.h"
 #include "ObjTitle.h"
+#include "SceneMain.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -11,20 +12,46 @@ using namespace GameL;
 //イニシャライズ
 void CObjTitle::Init()
 {
-
+	m_mou_x = 0.0f;
+	m_mou_y = 0.0f;
+	m_mou_l = false;
 }
 
 //アクション
 void CObjTitle::Action()
 {
+	//マウスの位置を取得
+	m_mou_x = (float)Input::GetPosX();
+	m_mou_y = (float)Input::GetPosY();
 
+	//マウスのボタンの状態
+	m_mou_l = Input::GetMouButtonL();
+
+	//マウスの位置とクリックする場所で当たり判定
+	if (m_mou_x > 350 && m_mou_x < 500 && m_mou_y>300 && m_mou_y < 500)
+	{
+		//マウスのボタンが押されたらメインに遷移
+		if (m_mou_l == true)
+		{
+			Scene::SetScene(new CSceneMain());
+		}
+	}
 }
 
 //ドロー
 void CObjTitle::Draw()
 {
-	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+	float c[4] = { 1,1,1,1 };
+
+	//仮マウス位置表示
+	wchar_t str[256];
+	swprintf_s(str, L"x=%f,y=%f", m_mou_x, m_mou_y);
+	Font::StrDraw(str, 20, 20, 12, c);
+
+
+	//タイトル
 	Font::StrDraw(L"繋がりクイズ", 200, 220, 64, c);
 
-	Font::StrDraw(L"Click Start", 225, 450, 64, c);
+	Font::StrDraw(L"Click Start", 225, 350, 64, c);
+
 }
