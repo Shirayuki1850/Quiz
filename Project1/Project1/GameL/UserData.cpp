@@ -57,7 +57,8 @@ unique_ptr<wchar_t> CUserData::ExternalDataOpen(const wchar_t* file_name,int* si
 	unique_ptr<wchar_t> str;
 	FILE* fp;
 	_wfopen_s(&fp,file_name,L"rt,ccs=Unicode");//文字コードをUnicode指定
-	if(fp==nullptr) return nullptr;
+	if(fp==nullptr) 
+		return nullptr;
 
 	//ファイルのサイズ取得
 	do

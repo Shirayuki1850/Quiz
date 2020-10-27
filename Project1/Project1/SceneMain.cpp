@@ -6,6 +6,9 @@
 #include "GameL/UserData.h"
 #include"GameL\DrawTexture.h"
 #include"GameL\SceneObjManager.h"
+#include"GameL/DrawFont.h"
+#include<math.h>
+#include<stdio.h>
 
 
 //使用するネームスペース
@@ -14,6 +17,8 @@ using namespace GameL;
 //使用ヘッダー
 #include "SceneMain.h"
 #include "GameHead.h"
+
+
 
 //コンストラクタ
 CSceneMain::CSceneMain()
