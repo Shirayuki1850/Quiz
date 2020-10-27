@@ -20,6 +20,8 @@ void CObjSelect::Init()
 {
 	m_mou_x = 0.0f;
 	m_mou_y = 0.0f;
+	px;
+	py;
 
 	m_mou_l = false;
 }
@@ -39,6 +41,12 @@ void CObjSelect::Action()
 	{
 
 	}*/
+
+	//１プレイヤーが正解した時、パネルを赤にする
+
+	//２プレイヤーが正解した時、パネルを青にする
+
+	//一定のゲーム数に到達したら相手のパネルを消す
 }
 
 //ドロー
@@ -50,12 +58,12 @@ void CObjSelect::Draw()
    Font::StrDraw(L"ジャンルを選択してください", 185, 50, 30, c);
    
    //ジャンルをクリックする場所
-   Font::StrDraw(L"国語", 100, 200, 30, c);
+   Font::StrDraw(L"国語   赤色", 100, 200, 30, c);
 
-   Font::StrDraw(L"外国語", 100, 300, 30, c);
+   Font::StrDraw(L"外国語  青色", 100, 300, 30, c);
 
-   Font::StrDraw(L"社会", 100, 400, 30, c);
+   Font::StrDraw(L"社会    緑色", 100, 400, 30, c);
 
-   Font::StrDraw(L"ゲーム関連", 100, 500, 30, c);
+   Font::StrDraw(L"ゲーム関連   黄色", 100, 500, 30, c);
 	
 }
