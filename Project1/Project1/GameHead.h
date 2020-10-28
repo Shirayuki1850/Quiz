@@ -9,6 +9,7 @@ enum OBJ_NAME
 	OBJ_TITLE,
 	OBJ_MOUSE,
 	OBJ_MAIN,
+	OBJ_SEIGO,
 };
 //------------------------------------------------
 
@@ -56,6 +57,8 @@ struct UserData
 #include "ObjSelect.h"
 #include "Objmouse.h"
 #include "ObjMain.h"
+#include "Objca.h"
+#include "Objia.h"
 
 //------------------------------------------------
 
@@ -63,11 +66,13 @@ struct UserData
 #include "SceneMain.h"
 #include "SceneTitle.h"
 #include "SelectScene.h"
+#include "Sceneca.h"
+#include "Sceneia.h"
 
 
 //-----------------------------------------------
 
 //シーンスタートクラス---------------------------
 //ゲーム開始時のシーンクラス登録
-#define SET_GAME_START  CSceneTitle
+#define SET_GAME_START  CSceneTitle//CSceneia
 //-----------------------------------------------

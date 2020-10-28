@@ -19,6 +19,12 @@
     <Filter Include="ソース ファイル\Question">
       <UniqueIdentifier>{ccd8c9ac-74db-49ca-9632-8442dfa4f3df}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\正解">
+      <UniqueIdentifier>{dd6ea573-7043-43c7-94dc-5b2c1631d971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\不正解">
+      <UniqueIdentifier>{3cc0323f-74d4-4598-8592-c243daebb1bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SceneMain.cpp">
@@ -87,6 +93,18 @@
     <ClCompile Include="ObjMain.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="Sceneca.cpp">
+      <Filter>ソース ファイル\正解</Filter>
+    </ClCompile>
+    <ClCompile Include="Objca.cpp">
+      <Filter>ソース ファイル\正解</Filter>
+    </ClCompile>
+    <ClCompile Include="Sceneia.cpp">
+      <Filter>ソース ファイル\不正解</Filter>
+    </ClCompile>
+    <ClCompile Include="Objia.cpp">
+      <Filter>ソース ファイル\不正解</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SceneMain.h">
@@ -154,6 +172,18 @@
     </ClInclude>
     <ClInclude Include="SceneQ.h">
       <Filter>ソース ファイル\Question</Filter>
+    </ClInclude>
+    <ClInclude Include="Sceneca.h">
+      <Filter>ソース ファイル\正解</Filter>
+    </ClInclude>
+    <ClInclude Include="Objca.h">
+      <Filter>ソース ファイル\正解</Filter>
+    </ClInclude>
+    <ClInclude Include="Sceneia.h">
+      <Filter>ソース ファイル\不正解</Filter>
+    </ClInclude>
+    <ClInclude Include="Objia.h">
+      <Filter>ソース ファイル\不正解</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

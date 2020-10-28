@@ -31,6 +31,8 @@ CSceneMain::~CSceneMain()
 
 }
 
+
+
 //ゲームメイン初期化メソッド
 void CSceneMain::InitScene()
 {
@@ -48,8 +50,9 @@ void CSceneMain::InitScene()
 	for (int i = 0; i < 100; i++)
 		fgetws(str1[i], 99, fp);
 
-	fclose(fp);
 	
+
+	fclose(fp);
 }
 
 //ゲームメイン実行化メソッド
@@ -61,5 +64,6 @@ void CSceneMain::Scene()
 		Font::StrDraw(str2, 0, 25 * i, 25, c);
 	}
 		
+	
 }
 

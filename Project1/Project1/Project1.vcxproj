@@ -138,10 +138,13 @@
     <ClCompile Include="GameL\SetWindow.cpp" />
     <ClCompile Include="GameL\UserData.cpp" />
     <ClCompile Include="GameL\WinInputs.cpp" />
+    <ClCompile Include="Objca.cpp" />
+    <ClCompile Include="Objia.cpp" />
     <ClCompile Include="ObjMain.cpp" />
     <ClCompile Include="Objmouse.cpp" />
     <ClCompile Include="ObjSelect.cpp" />
     <ClCompile Include="ObjTitle.cpp" />
+    <ClCompile Include="Sceneia.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneQ.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -149,6 +152,7 @@
     <ClCompile Include="SceneTitle.cpp" />
     <ClCompile Include="SelectScene.cpp" />
     <ClCompile Include="UtilityModule.cpp" />
+    <ClCompile Include="Sceneca.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameHead.h" />
@@ -164,10 +168,13 @@
     <ClInclude Include="GameL\UserData.h" />
     <ClInclude Include="GameL\WinInputs.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="Objca.h" />
+    <ClInclude Include="Objia.h" />
     <ClInclude Include="ObjMain.h" />
     <ClInclude Include="Objmouse.h" />
     <ClInclude Include="ObjSelect.h" />
     <ClInclude Include="ObjTitle.h" />
+    <ClInclude Include="Sceneca.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneQ.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -175,6 +182,7 @@
     <ClInclude Include="SceneTItle.h" />
     <ClInclude Include="SelectScene.h" />
     <ClInclude Include="UtilityModule.h" />
+    <ClInclude Include="Sceneia.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
