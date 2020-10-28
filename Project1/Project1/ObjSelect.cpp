@@ -22,8 +22,11 @@ void CObjSelect::Init()
 	m_mou_y = 0.0f;
 	px;
 	py;
+	pp[4];
 
 	m_mou_l = false;
+
+	
 }
 
 //アクション
@@ -36,11 +39,13 @@ void CObjSelect::Action()
 	//マウスのボタンの状態
 	m_mou_l = Input::GetMouButtonL();
 
-	//マウスの位置とクリックする場所で当たり判定
-	/*if ()
-	{
+	//pi = ((int)m_mou_x - 430) / 128;
 
-	}*/
+	//マウスの位置とクリックする場所で当たり判定
+	if (m_mou_x>430&&m_mou_x<490&&m_mou_y>390&&m_mou_y<450&&m_mou_l==true)
+	{
+		Scene::SetScene(new CSceneMain());
+	}
 
 	//１プレイヤーが正解した時、パネルを赤にする
 
@@ -52,7 +57,10 @@ void CObjSelect::Action()
 //ドロー
 void CObjSelect::Draw()
 {
-	float c[4] = { 1,1,1,1 };
+	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+
+	RECT_F src;
+	RECT_F dst;
 
    //説明
    Font::StrDraw(L"ジャンルを選択してください", 185, 50, 30, c);
@@ -65,5 +73,20 @@ void CObjSelect::Draw()
    Font::StrDraw(L"社会    緑色", 100, 400, 30, c);
 
    Font::StrDraw(L"ゲーム関連   黄色", 100, 500, 30, c);
+
+   //切り取り位置の設定
+   src.m_top = 0.0f;
+   src.m_left = 0.0f;
+   src.m_right = 128.0f;
+   src.m_bottom = 128.0f;
+
+   //表示位置の設定
+   dst.m_top = 390.0f;
+   dst.m_left = 430.0f;
+   dst.m_right = 490.0f;
+   dst.m_bottom = 450.0f;
+
+   //描画
+   Draw::Draw(2, &src, &dst, c, 0);
 	
 }
