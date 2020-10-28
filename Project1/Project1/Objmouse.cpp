@@ -18,7 +18,7 @@ void CObjmouse::Init()
 {
 
 	//マウスのグラフィック読み込み
-	Draw::LoadImage(L"mouse1.png", 1, TEX_SIZE_1024);
+	//Draw::LoadImage(L"mouse1.png", 1, TEX_SIZE_1024);
 
 
 	x = 0;  //主人公のX軸位置情報
