@@ -17,7 +17,6 @@ using namespace GameL;
 void CObjmouse::Init()
 {
 
-
 	//マウスのグラフィック読み込み
 	//Draw::LoadImage(L"mouse1.png", 1, TEX_SIZE_1024);
 
