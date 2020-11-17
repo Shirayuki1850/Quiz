@@ -45,25 +45,27 @@ void CSceneMain::InitScene()
 
 	FILE* fp;
 
+	
 	//	読み込みモードでファイルを開く
 	fopen_s(&fp, "Quiz1.txt", "rb");
 	for (int i = 0; i < 100; i++)
 		fgetws(str1[i], 99, fp);
-
-	
-
+		
 	fclose(fp);
 }
 
 //ゲームメイン実行化メソッド
 void CSceneMain::Scene()
 {
-	for (int i = 0; i < 100; i++)
+	int x=0;
+
+	for (int i = 0; i < 5; i++)
 	{
 		swprintf(str2, L"%s", str1[i]);
-		Font::StrDraw(str2, 0, 25 * i, 25, c);
+		Font::StrDraw(str2, 0, 5 * i+x, 25, c);
+
+		x += 50;
 	}
 		
-	
 }
 
