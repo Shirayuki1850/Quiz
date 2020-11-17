@@ -25,15 +25,15 @@
     <Filter Include="ソース ファイル\不正解">
       <UniqueIdentifier>{3cc0323f-74d4-4598-8592-c243daebb1bf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\マウス">
+      <UniqueIdentifier>{f99103ed-82e0-4598-9ae1-12f59a8e15d1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SceneMain.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="SelectScene.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Objmouse.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="GameL\Audio.cpp">
@@ -84,9 +84,6 @@
     <ClCompile Include="SceneTitle.cpp">
       <Filter>ソース ファイル\Title</Filter>
     </ClCompile>
-    <ClCompile Include="UtilityModule.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="SceneQ.cpp">
       <Filter>ソース ファイル\Question</Filter>
     </ClCompile>
@@ -104,6 +101,12 @@
     </ClCompile>
     <ClCompile Include="Objia.cpp">
       <Filter>ソース ファイル\不正解</Filter>
+    </ClCompile>
+    <ClCompile Include="Objmouse.cpp">
+      <Filter>ソース ファイル\マウス</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilityModule.cpp">
+      <Filter>ソース ファイル\マウス</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

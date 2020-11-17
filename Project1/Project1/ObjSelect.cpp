@@ -121,6 +121,7 @@ void CObjSelect::Action()
 
 	//１プレイヤーが正解した時、パネルを赤にする
 
+
 	//２プレイヤーが正解した時、パネルを青にする
 
 	//一定のゲーム数に到達したら相手のパネルを消す
@@ -135,17 +136,20 @@ void CObjSelect::Draw()
 	RECT_F src;
 	RECT_F dst;
 
+	int p=2;
+	float x = 0;
+
    //説明
-   Font::StrDraw(L"ジャンルを選択してください", 185, 50, 30, c);
+   Font::StrDraw(L"ジャンルを選択してください", 125, 60, 45, c);
    
    //ジャンルをクリックする場所
-   Font::StrDraw(L"国語   赤色", 100, 200, 30, c);
+   Font::StrDraw(L"国語", 100, 200, 30, c);
 
-   Font::StrDraw(L"外国語  青色", 100, 300, 30, c);
+   Font::StrDraw(L"外国語", 100, 300, 30, c);
 
-   Font::StrDraw(L"社会    緑色", 100, 400, 30, c);
+   Font::StrDraw(L"社会", 100, 400, 30, c);
 
-   Font::StrDraw(L"ゲーム関連   黄色", 100, 500, 30, c);
+   Font::StrDraw(L"ゲーム関連", 100, 500, 30, c);
 
    //切り取り位置の設定
    src.m_top = 0.0f;
@@ -153,12 +157,57 @@ void CObjSelect::Draw()
    src.m_right = 128.0f;
    src.m_bottom = 128.0f;
 
-   //表示位置の設定
-   dst.m_top = 190.0f;
-   dst.m_left = 430.0f;
-   dst.m_right = 500.0f;
-   dst.m_bottom = 260.0f;
+   for (int i = 0; i < 4; i++)
+   {
+		   dst.m_top = 190.0f;
+		   dst.m_left = 300.0f + x;
+		   dst.m_right = 370.0f + x;
+		   dst.m_bottom = 260.0f;
+		   x += 100;
 
-   //描画
-   Draw::Draw(6, &src, &dst, c, 0);
+	  //描画
+	  Draw::Draw(p++, &src, &dst, c, 0);
+   }
+
+   x = 0;
+
+   for (int i = 0; i < 4; i++)
+   {
+	   dst.m_top = 290.0f;
+	   dst.m_left = 300.0f + x;
+	   dst.m_right = 370.0f + x;
+	   dst.m_bottom = 360.0f;
+	   x += 100;
+
+	   //描画
+	   Draw::Draw(p++, &src, &dst, c, 0);
+   }
+
+   x = 0;
+
+   for (int i = 0; i < 4; i++)
+   {
+	   dst.m_top = 390.0f;
+	   dst.m_left = 300.0f + x;
+	   dst.m_right = 370.0f + x;
+	   dst.m_bottom = 460.0f;
+	   x += 100;
+
+	   //描画
+	   Draw::Draw(p++, &src, &dst, c, 0);
+   }
+
+   x = 0;
+
+   for (int i = 0; i < 4; i++)
+   {
+	   dst.m_top = 490.0f;
+	   dst.m_left = 300.0f + x;
+	   dst.m_right = 370.0f + x;
+	   dst.m_bottom = 560.0f;
+	   x += 100;
+
+	   //描画
+	   Draw::Draw(p++, &src, &dst, c, 0);
+   }
 }
