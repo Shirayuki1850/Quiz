@@ -22,7 +22,12 @@ void CObjSelect::Init()
 	m_mou_y = 0.0f;
 	px;
 	py;
+	pi;
+	pl;
 	pp[4];
+	po[4];
+
+	j=0;
 
 	m_mou_l = false;
 
@@ -32,6 +37,8 @@ void CObjSelect::Init()
 //アクション
 void CObjSelect::Action()
 {
+	
+
 	//マウスの位置を取得
 	m_mou_x = (float)Input::GetPosX();
 	m_mou_y = (float)Input::GetPosY();
@@ -39,12 +46,77 @@ void CObjSelect::Action()
 	//マウスのボタンの状態
 	m_mou_l = Input::GetMouButtonL();
 
-	//pi = ((int)m_mou_x - 430) / 128;
 
 	//マウスの位置とクリックする場所で当たり判定
-	if (m_mou_x>430&&m_mou_x<490&&m_mou_y>390&&m_mou_y<450&&m_mou_l==true)
+	if (m_mou_x >=430 && m_mou_x <= 710 && m_mou_y >= 190 && m_mou_y <= 470 && m_mou_l == true)
 	{
-		Scene::SetScene(new CSceneMain());
+		pi = ((int)m_mou_x - 430) / 70;
+
+		pl = ((int)m_mou_y - 190) / 70;
+
+
+
+		/*switch (pl)
+		{
+		case 0:
+			switch (pi)
+			{
+			case 0: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			case 1: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			case 2: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			case 3: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			}
+			break;
+
+		case 1:
+			switch (pl)
+			{
+			case 0: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			case 1: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			case 2: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			case 3: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			}
+			break;
+		case 2:
+			switch (pl)
+			{
+			case 0: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			case 1: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			case 2: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			case 3: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			}
+			break;
+		case 3:
+			switch (pl)
+			{
+			case 0: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			case 1: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			case 2: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			case 3: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			}
+			break;
+
+		}*/
+
+				//Scene::SetScene(new CSceneMain(pi,pl));
+
+		
 	}
 
 	//１プレイヤーが正解した時、パネルを赤にする
@@ -52,6 +124,7 @@ void CObjSelect::Action()
 	//２プレイヤーが正解した時、パネルを青にする
 
 	//一定のゲーム数に到達したら相手のパネルを消す
+
 }
 
 //ドロー
@@ -81,12 +154,11 @@ void CObjSelect::Draw()
    src.m_bottom = 128.0f;
 
    //表示位置の設定
-   dst.m_top = 390.0f;
+   dst.m_top = 190.0f;
    dst.m_left = 430.0f;
-   dst.m_right = 490.0f;
-   dst.m_bottom = 450.0f;
+   dst.m_right = 500.0f;
+   dst.m_bottom = 260.0f;
 
    //描画
-   Draw::Draw(2, &src, &dst, c, 0);
-	
+   Draw::Draw(6, &src, &dst, c, 0);
 }
