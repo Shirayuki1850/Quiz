@@ -27,17 +27,17 @@ void CObjSelect::Init()
 	pp[4];
 	po[4];
 
-	j=0;
+	j = 0;
 
 	m_mou_l = false;
 
-	
+
 }
 
 //アクション
 void CObjSelect::Action()
 {
-	
+
 
 	//マウスの位置を取得
 	m_mou_x = (float)Input::GetPosX();
@@ -48,79 +48,24 @@ void CObjSelect::Action()
 
 
 	//マウスの位置とクリックする場所で当たり判定
-	if (m_mou_x >=430 && m_mou_x <= 710 && m_mou_y >= 190 && m_mou_y <= 470 && m_mou_l == true)
+	if (m_mou_x >= 295 && m_mou_x <= 665 && m_mou_y >= 185 && m_mou_y <= 555 && m_mou_l == true)
 	{
-		pi = ((int)m_mou_x - 430) / 70;
+		pi = ((int)m_mou_x - 295) / 100;
 
-		pl = ((int)m_mou_y - 190) / 70;
+		pl = ((int)m_mou_y - 185) / 100;
 
-
-
-		/*switch (pl)
+		if ((((int)m_mou_x - 295) - pi * 30) / 70 != pi)
+			;
+		else if ((((int)m_mou_y - 185) - pl * 30) / 70 != pl)
+		;
+		else
 		{
-		case 0:
-			switch (pi)
-			{
-			case 0: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			case 1: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			case 2: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			case 3: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			}
-			break;
+			Scene::SetScene(new CSceneMain());
+		}
 
-		case 1:
-			switch (pl)
-			{
-			case 0: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			case 1: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			case 2: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			case 3: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			}
-			break;
-		case 2:
-			switch (pl)
-			{
-			case 0: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			case 1: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			case 2: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			case 3: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			}
-			break;
-		case 3:
-			switch (pl)
-			{
-			case 0: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			case 1: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			case 2: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			case 3: fopen_s(&fp, "Quiz1.txt", "rb");
-				break;
-			}
-			break;
-
-		}*/
-
-				//Scene::SetScene(new CSceneMain(pi,pl));
-
-		
 	}
 
 	//１プレイヤーが正解した時、パネルを赤にする
-
 
 	//２プレイヤーが正解した時、パネルを青にする
 
@@ -133,6 +78,10 @@ void CObjSelect::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
 
+	//仮マウス位置表示
+	wchar_t str[256];
+	swprintf_s(str, L"x=%f,y=%f", m_mou_x, m_mou_y);
+	Font::StrDraw(str, 20, 20, 12, c);
 	RECT_F src;
 	RECT_F dst;
 
@@ -163,51 +112,38 @@ void CObjSelect::Draw()
 		   dst.m_left = 300.0f + x;
 		   dst.m_right = 370.0f + x;
 		   dst.m_bottom = 260.0f;
-		   x += 100;
+		   
+
+	  //描画
+	  Draw::Draw(p++, &src, &dst, c, 0);
+
+	  dst.m_top = 290.0f;
+	  dst.m_left = 300.0f + x;
+	  dst.m_right = 370.0f + x;
+	  dst.m_bottom = 360.0f;
+
+
+	  //描画
+	  Draw::Draw(p++, &src, &dst, c, 0);
+
+	  dst.m_top = 390.0f;
+	  dst.m_left = 300.0f + x;
+	  dst.m_right = 370.0f + x;
+	  dst.m_bottom = 460.0f;
+
+
+	  //描画
+	  Draw::Draw(p++, &src, &dst, c, 0);
+
+	  dst.m_top = 490.0f;
+	  dst.m_left = 300.0f + x;
+	  dst.m_right = 370.0f + x;
+	  dst.m_bottom = 560.0f;
+	  x += 100;
 
 	  //描画
 	  Draw::Draw(p++, &src, &dst, c, 0);
    }
 
-   x = 0;
-
-   for (int i = 0; i < 4; i++)
-   {
-	   dst.m_top = 290.0f;
-	   dst.m_left = 300.0f + x;
-	   dst.m_right = 370.0f + x;
-	   dst.m_bottom = 360.0f;
-	   x += 100;
-
-	   //描画
-	   Draw::Draw(p++, &src, &dst, c, 0);
-   }
-
-   x = 0;
-
-   for (int i = 0; i < 4; i++)
-   {
-	   dst.m_top = 390.0f;
-	   dst.m_left = 300.0f + x;
-	   dst.m_right = 370.0f + x;
-	   dst.m_bottom = 460.0f;
-	   x += 100;
-
-	   //描画
-	   Draw::Draw(p++, &src, &dst, c, 0);
-   }
-
-   x = 0;
-
-   for (int i = 0; i < 4; i++)
-   {
-	   dst.m_top = 490.0f;
-	   dst.m_left = 300.0f + x;
-	   dst.m_right = 370.0f + x;
-	   dst.m_bottom = 560.0f;
-	   x += 100;
-
-	   //描画
-	   Draw::Draw(p++, &src, &dst, c, 0);
-   }
+  
 }
