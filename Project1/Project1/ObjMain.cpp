@@ -35,7 +35,7 @@ void CObjMain::Action()
 
 
 	//マウスの位置とクリックする場所で当たり判定(選択肢１)
-	if (m_mou_x > 0 && m_mou_x < 75 && m_mou_y>26 && m_mou_y < 50)
+	if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>60 && m_mou_y < 70)
 	{
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
@@ -45,7 +45,7 @@ void CObjMain::Action()
 	}
 
 	//マウスの位置とクリックする場所で当たり判定（選択肢２）
-	if (m_mou_x > 0 && m_mou_x < 100 && m_mou_y>51 && m_mou_y < 75)
+	if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>115 && m_mou_y < 125)
 	{
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
@@ -55,7 +55,7 @@ void CObjMain::Action()
 	}
 
 	//マウスの位置とクリックする場所で当たり判定（選択肢３）
-	if (m_mou_x > 0 && m_mou_x < 120 && m_mou_y>76 && m_mou_y < 100)
+	if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>170 && m_mou_y < 180)
 	{
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
@@ -65,7 +65,7 @@ void CObjMain::Action()
 	}
 
 	//マウスの位置とクリックする場所で当たり判定（選択肢４）
-	if (m_mou_x > 0 && m_mou_x < 150 && m_mou_y>101 && m_mou_y < 125)
+	if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>225 && m_mou_y < 235)
 	{
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)

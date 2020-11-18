@@ -34,7 +34,7 @@ void CObjTitle::Action()
 	m_mou_l = Input::GetMouButtonL();
 
 	//マウスの位置とクリックする場所で当たり判定
-	if (m_mou_x > 350 && m_mou_x < 500 && m_mou_y>300 && m_mou_y < 500)
+	if (m_mou_x > 225 && m_mou_x < 570 && m_mou_y>400 && m_mou_y < 450)
 	{
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
@@ -49,15 +49,14 @@ void CObjTitle::Draw()
 {
 	float c[4] = { 1,1,1,1 };
 
-	//仮マウス位置表示
+	/*//仮マウス位置表示
 	wchar_t str[256];
 	swprintf_s(str, L"x=%f,y=%f", m_mou_x, m_mou_y);
-	Font::StrDraw(str, 20, 20, 12, c);
-
+	Font::StrDraw(str, 20, 20, 12, c);*/
 
 	//タイトル
-	Font::StrDraw(L"繋がりクイズ", 200, 220, 64, c);
+	Font::StrDraw(L"繋がりクイズ", 130, 180, 95, c);
 
-	Font::StrDraw(L"Click Start", 225, 350, 64, c);
+	Font::StrDraw(L"Click Start", 225, 400, 64, c);
 
 }
