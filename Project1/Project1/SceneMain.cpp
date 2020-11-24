@@ -113,6 +113,9 @@ void CSceneMain::InitScene()
 		fgetws(str1[i], 99, fp);
 		
 	fclose(fp);
+
+
+
 }
 
 //ゲームメイン実行化メソッド
