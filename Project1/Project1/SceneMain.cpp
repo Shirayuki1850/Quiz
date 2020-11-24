@@ -52,10 +52,10 @@ void CSceneMain::InitScene()
 	//	読み込みモードでファイルを開く
 	/*fopen_s(&fp, "Quiz1.txt", "rb");*/
 
-	switch (pi)
+	switch (pl)
 		{
 		case 0:
-			switch (pl)
+			switch (pi)
 			{
 			case 0: fopen_s(&fp, "Quiz1.txt", "rb");
 				break;
@@ -69,7 +69,7 @@ void CSceneMain::InitScene()
 			break;
 
 		case 1:
-			switch (pl)
+			switch (pi)
 			{
 			case 0: fopen_s(&fp, "Quiz5.txt", "rb");
 				break;
@@ -82,11 +82,11 @@ void CSceneMain::InitScene()
 			}
 			break;
 		case 2:
-			switch (pl)
+			switch (pi)
 			{
 			case 0: fopen_s(&fp, "Quiz9.txt", "rb");
 				break;
-			case 1: fopen_s(&fp, "Quiz10txt", "rb");
+			case 1: fopen_s(&fp, "Quiz10.txt", "rb");
 				break;
 			case 2: fopen_s(&fp, "Quiz11.txt", "rb");
 				break;
@@ -95,7 +95,7 @@ void CSceneMain::InitScene()
 			}
 			break;
 		case 3:
-			switch (pl)
+			switch (pi)
 			{
 			case 0: fopen_s(&fp, "Quiz13.txt", "rb");
 				break;
