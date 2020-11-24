@@ -9,9 +9,12 @@ using namespace GameL;
 class CSceneia :public CScene
 {
 public:
-	CSceneia();
+	CSceneia(int x,int y);
 	~CSceneia();
 	void InitScene();    //ゲームタイトルの初期化メソッド
 	void Scene();        //ゲームタイトルの実行中メソッド
 private:
+
+	int pi;
+	int pl;
 };

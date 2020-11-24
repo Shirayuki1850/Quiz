@@ -20,9 +20,12 @@ using namespace GameL;
 
 
 //コンストラクタ
-CSceneMain::CSceneMain()
+CSceneMain::CSceneMain(int x,int y)
 {
-	
+	pi = x;
+	pl = y;
+
+
 }
 
 //デストラクタ
@@ -36,7 +39,7 @@ CSceneMain::~CSceneMain()
 //ゲームメイン初期化メソッド
 void CSceneMain::InitScene()
 {
-	CObjMain*p = new CObjMain();
+	CObjMain*p = new CObjMain(pi,pl);
 	Objs::InsertObj(p, OBJ_MAIN, 1);
 
 	//カーソル作成
@@ -49,10 +52,10 @@ void CSceneMain::InitScene()
 	//	読み込みモードでファイルを開く
 	/*fopen_s(&fp, "Quiz1.txt", "rb");*/
 
-	switch (pl)
+	switch (pi)
 		{
 		case 0:
-			switch (pi)
+			switch (pl)
 			{
 			case 0: fopen_s(&fp, "Quiz1.txt", "rb");
 				break;

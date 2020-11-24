@@ -60,7 +60,7 @@ void CObjSelect::Action()
 		;
 		else
 		{
-			Scene::SetScene(new CSceneMain());
+			Scene::SetScene(new CSceneMain(pi,pl));
 		}
 
 	}

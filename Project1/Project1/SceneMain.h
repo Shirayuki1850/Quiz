@@ -9,7 +9,7 @@ using namespace GameL;
 class CSceneMain :public CScene
 {
 public:
-	CSceneMain();
+	CSceneMain(int x,int y);
 	~CSceneMain();
 	void InitScene();
 	void Scene();

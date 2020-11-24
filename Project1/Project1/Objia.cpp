@@ -17,6 +17,14 @@ void CObjia::Init()
 	m_mou_l = false;
 }
 
+//コンストラクタ
+CObjia::CObjia(float x, float y)
+{
+	pi = x;
+	pl = y;
+
+}
+
 //アクション
 void CObjia::Action()
 {
@@ -33,7 +41,7 @@ void CObjia::Action()
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
 		{
-			Scene::SetScene(new CSceneMain());
+			Scene::SetScene(new CSceneMain(pi,pl));
 		}
 	}
 }
