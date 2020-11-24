@@ -73,7 +73,7 @@ void CObjSelect::Action()
 			break;
 
 		case 1:
-			switch (pl)
+			switch (pi)
 			{
 			case 0: fopen_s(&fp, "Quiz1.txt", "rb");
 				break;
@@ -86,7 +86,7 @@ void CObjSelect::Action()
 			}
 			break;
 		case 2:
-			switch (pl)
+			switch (pi)
 			{
 			case 0: fopen_s(&fp, "Quiz1.txt", "rb");
 				break;
@@ -99,7 +99,7 @@ void CObjSelect::Action()
 			}
 			break;
 		case 3:
-			switch (pl)
+			switch (pi)
 			{
 			case 0: fopen_s(&fp, "Quiz1.txt", "rb");
 				break;
