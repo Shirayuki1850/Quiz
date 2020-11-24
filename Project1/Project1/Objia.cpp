@@ -28,7 +28,7 @@ void CObjia::Action()
 	m_mou_l = Input::GetMouButtonL();
 
 	//マウスの位置とクリックする場所で当たり判定
-	if (m_mou_x > 350 && m_mou_x < 500 && m_mou_y>300 && m_mou_y < 500)
+	if (m_mou_x > 235 && m_mou_x < 570 && m_mou_y>375 && m_mou_y < 445)
 	{
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
@@ -45,10 +45,9 @@ void CObjia::Draw()
 
 	float c[4] = { 1,1,1,1 };
 
-
 	//タイトル
-	Font::StrDraw(L"不正解", 250, 180, 100, c1);
+	Font::StrDraw(L"不正解", 170, 130, 150, c1);
 
-	Font::StrDraw(L"問題へ戻る", 270, 380, 50, c);
+	Font::StrDraw(L"問題へ戻る", 235, 380, 70, c);
 
 }

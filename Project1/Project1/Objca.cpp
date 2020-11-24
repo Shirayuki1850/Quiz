@@ -28,7 +28,7 @@ void CObjca::Action()
 	m_mou_l = Input::GetMouButtonL();
 
 	//マウスの位置とクリックする場所で当たり判定
-	if (m_mou_x > 350 && m_mou_x < 500 && m_mou_y>300 && m_mou_y < 500)
+	if (m_mou_x > 200 && m_mou_x < 605 && m_mou_y>375 && m_mou_y < 445)
 	{
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
@@ -45,10 +45,9 @@ void CObjca::Draw()
 
 	float c[4] = { 1,1,1,1 };
 
-
 	//タイトル
-	Font::StrDraw(L"正解！！", 220, 200, 100, c1);
+	Font::StrDraw(L"正解!!", 205, 170, 130, c1);
 
-	Font::StrDraw(L"パネルへ", 300, 380, 50, c);
+	Font::StrDraw(L"パネルへ戻る", 200, 380, 70, c);
 
 }

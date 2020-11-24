@@ -43,11 +43,69 @@ void CSceneMain::InitScene()
 	CObjmouse* obj = new CObjmouse();
 	Objs::InsertObj(obj, OBJ_MOUSE, 2);
 
-	FILE* fp;
+	FILE* fp=0;
 
 	
 	//	読み込みモードでファイルを開く
-	fopen_s(&fp, "Quiz1.txt", "rb");
+	/*fopen_s(&fp, "Quiz1.txt", "rb");*/
+
+	switch (pl)
+		{
+		case 0:
+			switch (pi)
+			{
+			case 0: fopen_s(&fp, "Quiz1.txt", "rb");
+				break;
+			case 1: fopen_s(&fp, "Quiz2.txt", "rb");
+				break;
+			case 2: fopen_s(&fp, "Quiz3.txt", "rb");
+				break;
+			case 3: fopen_s(&fp, "Quiz4.txt", "rb");
+				break;
+			}
+			break;
+
+		case 1:
+			switch (pl)
+			{
+			case 0: fopen_s(&fp, "Quiz5.txt", "rb");
+				break;
+			case 1: fopen_s(&fp, "Quiz6.txt", "rb");
+				break;
+			case 2: fopen_s(&fp, "Quiz7.txt", "rb");
+				break;
+			case 3: fopen_s(&fp, "Quiz8.txt", "rb");
+				break;
+			}
+			break;
+		case 2:
+			switch (pl)
+			{
+			case 0: fopen_s(&fp, "Quiz9.txt", "rb");
+				break;
+			case 1: fopen_s(&fp, "Quiz10txt", "rb");
+				break;
+			case 2: fopen_s(&fp, "Quiz11.txt", "rb");
+				break;
+			case 3: fopen_s(&fp, "Quiz12.txt", "rb");
+				break;
+			}
+			break;
+		case 3:
+			switch (pl)
+			{
+			case 0: fopen_s(&fp, "Quiz13.txt", "rb");
+				break;
+			case 1: fopen_s(&fp, "Quiz14.txt", "rb");
+				break;
+			case 2: fopen_s(&fp, "Quiz15.txt", "rb");
+				break;
+			case 3: fopen_s(&fp, "Quiz16.txt", "rb");
+				break;
+			}
+			break;
+
+		}
 	for (int i = 0; i < 100; i++)
 		fgetws(str1[i], 99, fp);
 		
