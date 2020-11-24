@@ -16,11 +16,15 @@
 using namespace GameL;
 
 //コンストラクタ
-CObjMain::CObjMain(float x, float y)
+CObjMain::CObjMain(float x, float y,int pp[16])
 {
 	pi = x;
 	pl = y;
-
+	for (int i = 0; i < 16; i++)
+	{
+		b_pp[i] = pp[i];
+	}
+	
 }
 
 //イニシャライズ
@@ -48,7 +52,7 @@ void CObjMain::Action()
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
 		{
-			Scene::SetScene(new CSceneca());
+			Scene::SetScene(new CSceneca(pi,pl,b_pp));
 		}
 	}
 
@@ -58,7 +62,7 @@ void CObjMain::Action()
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
 		{
-			Scene::SetScene(new CSceneia(pi,pl));
+			Scene::SetScene(new CSceneia(pi,pl,b_pp));
 		}
 	}
 
@@ -68,7 +72,7 @@ void CObjMain::Action()
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
 		{
-			Scene::SetScene(new CSceneia(pi,pl));
+			Scene::SetScene(new CSceneia(pi,pl,b_pp));
 		}
 	}
 
@@ -78,7 +82,7 @@ void CObjMain::Action()
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
 		{
-			Scene::SetScene(new CSceneia(pi,pl));
+			Scene::SetScene(new CSceneia(pi,pl,b_pp));
 		}
 	}
 }

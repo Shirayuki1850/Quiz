@@ -15,6 +15,16 @@
 //使用するネームスペース
 using namespace GameL;
 
+CObjSelect::CObjSelect(int x,int y,int pp[16])
+{
+	ppx = x;
+	ppy = y;
+	for (int i = 0; i < 16; i++)
+	{
+		b_pp[i] = pp[i];
+	}
+}
+
 //イニシャライズ
 void CObjSelect::Init()
 {
@@ -31,13 +41,23 @@ void CObjSelect::Init()
 
 	m_mou_l = false;
 
+	flag = false;
 
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			ab_pp[i][j] = b_pp[(i * 4 ) + j];
+		}
+	}
 }
 
 //アクション
 void CObjSelect::Action()
 {
+	CObjca* objgqsl = (CObjca*)Objs::GetObj(OBJ_SEIGO);
 
+	//objgqsl->SelectPanel(flag);
 
 	//マウスの位置を取得
 	m_mou_x = (float)Input::GetPosX();
@@ -57,19 +77,26 @@ void CObjSelect::Action()
 		if ((((int)m_mou_x - 295) - pi * 30) / 70 != pi)
 			;
 		else if ((((int)m_mou_y - 185) - pl * 30) / 70 != pl)
-		;
+			;
 		else
 		{
-			Scene::SetScene(new CSceneMain(pi,pl));
+			if (b_pp[(pi * 4) + pl] == 0)
+				Scene::SetScene(new CSceneMain(pi, pl, b_pp));
 		}
 
 	}
-
-	//１プレイヤーが正解した時、パネルを赤にする
-
+	
+	
 	//２プレイヤーが正解した時、パネルを青にする
 
 	//一定のゲーム数に到達したら相手のパネルを消す
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+
+		}
+	}
 
 }
 
@@ -87,6 +114,7 @@ void CObjSelect::Draw()
 
 	int p=2;
 	float x = 0;
+	float y = 0;
 
    //説明
    Font::StrDraw(L"ジャンルを選択してください", 125, 60, 45, c);
@@ -106,44 +134,43 @@ void CObjSelect::Draw()
    src.m_right = 128.0f;
    src.m_bottom = 128.0f;
 
-   for (int i = 0; i < 4; i++)
+   for (int i = 0; i < 16; i++)
    {
-		   dst.m_top = 190.0f;
-		   dst.m_left = 300.0f + x;
-		   dst.m_right = 370.0f + x;
-		   dst.m_bottom = 260.0f;
-		   
+	  if (b_pp[i] == 1)
+	  {
+		  float c1[4] = { 1.0f,0.0f,0.0f,1.0f };
+		  RECT_F src1;
+		  RECT_F dst1;
 
-	  //描画
-	  Draw::Draw(p++, &src, &dst, c, 0);
+		  src1.m_top = 0.0f;
+		  src1.m_left = 0.0f;
+		  src1.m_right = 128.0f;
+		  src1.m_bottom = 128.0f;
 
-	  dst.m_top = 290.0f;
-	  dst.m_left = 300.0f + x;
-	  dst.m_right = 370.0f + x;
-	  dst.m_bottom = 360.0f;
+		  dst1.m_top = 190.0f + y;
+		  dst1.m_left = 300.0f + x;
+		  dst1.m_right = 370.0f + x;
+		  dst1.m_bottom = 260.0f + y;
 
+		  Draw::Draw(18, &src1, &dst1, c1, 0);
+	  }
+	  else
+	  {
+		  dst.m_top = 190.0f + y;
+		  dst.m_left = 300.0f + x;
+		  dst.m_right = 370.0f + x;
+		  dst.m_bottom = 260.0f + y;
+		  //描画
+		  Draw::Draw(p, &src, &dst, c, 0);
+	  }
 
-	  //描画
-	  Draw::Draw(p++, &src, &dst, c, 0);
-
-	  dst.m_top = 390.0f;
-	  dst.m_left = 300.0f + x;
-	  dst.m_right = 370.0f + x;
-	  dst.m_bottom = 460.0f;
-
-
-	  //描画
-	  Draw::Draw(p++, &src, &dst, c, 0);
-
-	  dst.m_top = 490.0f;
-	  dst.m_left = 300.0f + x;
-	  dst.m_right = 370.0f + x;
-	  dst.m_bottom = 560.0f;
-	  x += 100;
-
-	  //描画
-	  Draw::Draw(p++, &src, &dst, c, 0);
+	  y += 100;
+	  p++;
+	  if (y == 400)
+	  {
+		  y = 0;
+		  x += 100;
+	  }
    }
-
-  
 }
+

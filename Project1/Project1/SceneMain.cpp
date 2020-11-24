@@ -20,12 +20,15 @@ using namespace GameL;
 
 
 //コンストラクタ
-CSceneMain::CSceneMain(int x,int y)
+CSceneMain::CSceneMain(int x,int y,int pp[16])
 {
 	pi = x;
 	pl = y;
-
-
+	for (int i = 0; i < 16; i++)
+	{
+		ans_flag[i] = pp[i];
+	}
+	
 }
 
 //デストラクタ
@@ -39,7 +42,7 @@ CSceneMain::~CSceneMain()
 //ゲームメイン初期化メソッド
 void CSceneMain::InitScene()
 {
-	CObjMain*p = new CObjMain(pi,pl);
+	CObjMain*p = new CObjMain(pi,pl,ans_flag);
 	Objs::InsertObj(p, OBJ_MAIN, 1);
 
 	//カーソル作成

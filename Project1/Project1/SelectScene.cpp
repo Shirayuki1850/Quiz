@@ -15,9 +15,14 @@ using namespace GameL;
 #include "GameHead.h"
 
 //コンストラクタ
-CSelectScene::CSelectScene()
+CSelectScene::CSelectScene(int x,int y,int pp[16])
 {
-
+	px = x;
+	py = y;
+	for (int i = 0; i < 16; i++)
+	{
+		b_pp[i] = pp[i];
+	}
 }
 
 //デストラクタ
@@ -48,7 +53,7 @@ void CSelectScene::InitScene()
 	Draw::LoadImage(L"panel1.png", 18, TEX_SIZE_1024);
 	Draw::LoadImage(L"panel2.png", 19, TEX_SIZE_1024);
 
-	CObjSelect* p = new CObjSelect();
+	CObjSelect* p = new CObjSelect(px,py,b_pp);
 	Objs::InsertObj(p, OBJ_TITLE, 1);
 }
 

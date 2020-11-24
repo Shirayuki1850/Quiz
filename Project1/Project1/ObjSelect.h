@@ -8,7 +8,7 @@ using namespace GameL;
 class CObjSelect : public CObj
 {
 public:
-	CObjSelect() {};
+	CObjSelect(int x,int y,int pp[16]);
 	~CObjSelect() {};
 	void Init();   //イニシャライズ
 	void Action(); //アクション
@@ -24,6 +24,14 @@ private:
 	float pp[4];   //パネルに触れた位置X
 	float po[4];   //パネルに触れた位置Y
 	int j;         //ループ回す用
+	int b_pp[16];
 
 	bool  m_mou_l; //マウスの左ボタン
+	bool flag;
+
+	int ppx;
+	int ppy;
+
+	int ab_pp[4][4];
+
 };

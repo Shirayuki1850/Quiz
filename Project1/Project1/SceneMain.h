@@ -9,7 +9,7 @@ using namespace GameL;
 class CSceneMain :public CScene
 {
 public:
-	CSceneMain(int x,int y);
+	CSceneMain(int x,int y,int pp[16]);
 	~CSceneMain();
 	void InitScene();
 	void Scene();
@@ -25,6 +25,8 @@ private:
 	float m_mou_x; //マウスの位置X
 	float m_mou_y; //マウスの位置Y
 	bool  m_mou_l; //マウスの左ボタン
+
+	int ans_flag[16];
 
 	//松崎〇ぬ
 };

@@ -9,12 +9,24 @@
 //使用するネームスペース
 using namespace GameL;
 
+
+CObjca::CObjca(int x,int y,int pp[16])
+{
+	px = x;
+	py = y;
+	for (int i = 0; i < 16; i++)
+	{
+		b_pp[i] = pp[i];
+	}
+}
+
 //イニシャライズ
 void CObjca::Init()
 {
 	m_mou_x = 0.0f;
 	m_mou_y = 0.0f;
 	m_mou_l = false;
+	flag = true;
 }
 
 //アクション
@@ -23,6 +35,7 @@ void CObjca::Action()
 	//マウスの位置を取得
 	m_mou_x = (float)Input::GetPosX();
 	m_mou_y = (float)Input::GetPosY();
+	
 
 	//マウスのボタンの状態
 	m_mou_l = Input::GetMouButtonL();
@@ -33,7 +46,8 @@ void CObjca::Action()
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
 		{
-			Scene::SetScene(new CSelectScene());
+			b_pp[(px*4) + py] = 1;
+			Scene::SetScene(new CSelectScene(px,py,b_pp));
 		}
 	}
 }

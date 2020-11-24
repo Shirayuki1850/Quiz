@@ -17,9 +17,14 @@ using namespace GameL;
 #include "Objca.h"
 
 //コンストラクタ
-CSceneca::CSceneca()
+CSceneca::CSceneca(int x,int y,int pp[16])
 {
-
+	px = x;
+	py = y;
+	for (int i = 0; i < 16; i++)
+	{
+		b_pp[i] = pp[i];
+	}
 }
 
 //デストラクタ
@@ -35,7 +40,7 @@ void CSceneca::InitScene()
 	Font::SetStrTex(L"正解！！");
 
 	//正解オブジェクト作成
-	CObjca* obji = new CObjca();     
+	CObjca* obji = new CObjca(px,py,b_pp);     
 	Objs::InsertObj(obji, OBJ_SEIGO, 10);
 }
 

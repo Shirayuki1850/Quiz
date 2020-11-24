@@ -8,7 +8,7 @@ using namespace GameL;
 class CObjMain :public CObj
 {
 public:
-	CObjMain(float x,float y) ;
+	CObjMain(float x,float y,int pp[16]) ;
 	~CObjMain() {};
 	void Init();  //イニシャライズ
 	void Action(); //アクション
@@ -20,5 +20,6 @@ private:
 
 	int pi;
 	int pl;
+	int b_pp[16];
 
 };

@@ -16,7 +16,11 @@ void CObjTitle::Init()
 	m_mou_x = 0.0f;
 	m_mou_y = 0.0f;
 	m_mou_l = false;
-
+	for (int i = 0; i < 16; i++)
+	{
+			pp[i] = 0;
+		
+	}
 
 }
 
@@ -39,7 +43,7 @@ void CObjTitle::Action()
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
 		{
-			Scene::SetScene(new CSelectScene());
+			Scene::SetScene(new CSelectScene(0,0,pp));
 		}
 	}
 }
