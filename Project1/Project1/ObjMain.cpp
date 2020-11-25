@@ -33,11 +33,46 @@ void CObjMain::Init()
 	m_mou_x = 0.0f;
 	m_mou_y = 0.0f;
 	m_mou_l = false;
+
+	f = false;
+	f2 = false;
 }
 
 //アクション
 void CObjMain::Action()
 {
+
+	if (Input::GetVKey('F') == true&&f==false) //1P
+	{
+
+		f = true;
+		f2 = false;
+	}
+	if (f == true)
+	{
+		float c1[4] = { 1,0,0,1 };
+
+		Font::StrDraw(L"1P答えをどうぞ。", 210, 350, 50, c1);
+	}
+
+	if (Input::GetVKey('J') == true &&f2==false)//2P
+	{
+		f2 = true;
+		f = false;
+		
+	}
+	if (f2 == true)
+	{
+		float c2[4] = { 0,0.6,1,1 };
+
+		Font::StrDraw(L"2P答えをどうぞ。", 210, 400, 50, c2);
+	}
+
+	if (Input::GetVKey(VK_SPACE) == true)
+	{
+		f = false;
+		f2 = false;
+	}
 	//マウスの位置を取得
 	m_mou_x = (float)Input::GetPosX();
 	m_mou_y = (float)Input::GetPosY();

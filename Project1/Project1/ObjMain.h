@@ -17,6 +17,9 @@ private:
 	float m_mou_x; //マウスの位置X
 	float m_mou_y; //マウスの位置Y
 	bool  m_mou_l; //マウスの左ボタン
+	bool f;
+	bool f2;
+	
 
 	int pi;
 	int pl;
