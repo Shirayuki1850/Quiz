@@ -90,13 +90,69 @@ void CObjSelect::Action()
 	//２プレイヤーが正解した時、パネルを青にする
 
 	//一定のゲーム数に到達したら相手のパネルを消す
-	for (int i = 0; i < 4; i++)
-	{
-		for (int j = 0; j < 4; j++)
+	
+		int count1 = 0;
+		int count2 = 0;
+		for (int i = 0; i < 4; i++)
 		{
+			for (int j = 0; j < 4; j++)
+			{
+				if (ab_pp[j][i] == 1)//横の勝利条件
+				{
+					count1++;
+				}
+				if (ab_pp[i][j] == 1)//縦の勝利条件
+				{
+					count2++;
+				}
+			}
+			if (count1 == 4)//横
+			{
+				
+			}
+			else
+			{
+				count1 = 0;
+			}
+			if (count2 == 4)//縦
+			{
 
+			}
+			else
+			{
+				count2 = 0;
+			}
 		}
-	}
+		
+		for (int i = 0; i < 4; i++)//斜めの勝利条件
+		{
+			if (ab_pp[i][i] == 1)
+			{
+				count1++;
+			}
+			if (ab_pp[3 - i][i] == 1)
+			{
+				count2++;
+			}
+			if (count1 == 4)
+			{
+
+			}
+			else
+			{
+				count1 = 0;
+			}
+			if (count2== 4)
+			{
+
+			}
+			else
+			{
+				count2 = 0;
+			}
+		}
+		
+	
 
 }
 

@@ -27,6 +27,4 @@ private:
 	bool  m_mou_l; //マウスの左ボタン
 
 	int ans_flag[16];
-
-	//松崎〇ぬ
 };
