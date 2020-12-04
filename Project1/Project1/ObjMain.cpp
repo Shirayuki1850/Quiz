@@ -84,46 +84,89 @@ void CObjMain::Action()
 	//マウスの位置とクリックする場所で当たり判定(選択肢１)
 	if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>60 && m_mou_y < 70)
 	{
-		//マウスのボタンが押されたらメインに遷移
-		if (m_mou_l == true)
+		if ((pl == 0 && pi == 0) || (pl == 0 && pi == 3) || (pl == 2 && pi == 1) || (pl == 3 && pi == 1))
 		{
-			Scene::SetScene(new CSceneca(pi,pl,b_pp));
+			//マウスのボタンが押されたらメインに遷移
+			if (m_mou_l == true)
+			{
+				Scene::SetScene(new CSceneca(pi, pl, b_pp));
+			}
 		}
-	}
+		else
+		{
+			if (m_mou_l == true)
+			{
+				Scene::SetScene(new CSceneia(pi, pl, b_pp));//不正解
+			}
+		}
 
+	}
 	//マウスの位置とクリックする場所で当たり判定（選択肢２）
-	if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>115 && m_mou_y < 125)
+	else if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>115 && m_mou_y < 125)
 	{
-		//マウスのボタンが押されたらメインに遷移
-		if (m_mou_l == true)
+		if ((pl == 0 && pi == 2) || (pl == 1 && pi == 2) || (pl == 2 && pi == 0) || (pl == 3 && pi == 0))
 		{
-			Scene::SetScene(new CSceneia(pi,pl,b_pp));
+			//マウスのボタンが押されたらメインに遷移
+			if (m_mou_l == true)
+			{
+				Scene::SetScene(new CSceneca(pi, pl, b_pp));//正解
+			}
+		}
+		else
+		{
+			if (m_mou_l == true)
+			{
+				Scene::SetScene(new CSceneia(pi, pl, b_pp));//不正解
+			}
 		}
 	}
-
 	//マウスの位置とクリックする場所で当たり判定（選択肢３）
-	if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>170 && m_mou_y < 180)
+	else if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>170 && m_mou_y < 180)
 	{
-		//マウスのボタンが押されたらメインに遷移
-		if (m_mou_l == true)
+		if ((pl == 0 && pi == 1) || (pl == 1 && pi == 1) || (pl == 2 && pi == 3) || (pl == 3 && pi == 3))
 		{
-			Scene::SetScene(new CSceneia(pi,pl,b_pp));
+			//マウスのボタンが押されたらメインに遷移
+			if (m_mou_l == true)
+			{
+				Scene::SetScene(new CSceneca(pi, pl, b_pp));//正解
+				//Scene::SetScene(new CSceneia(pi,pl,b_pp));
+			}
+		}	
+		else
+		{
+			if (m_mou_l == true)
+			{
+				Scene::SetScene(new CSceneia(pi, pl, b_pp));//不正解
+			}
 		}
 	}
-
 	//マウスの位置とクリックする場所で当たり判定（選択肢４）
-	if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>225 && m_mou_y < 235)
+	else if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>225 && m_mou_y < 235)
 	{
-		//マウスのボタンが押されたらメインに遷移
-		if (m_mou_l == true)
+		if ((pl == 1 && pi == 0) || (pl == 1 && pi == 3) || (pl == 2 && pi == 2) || (pl == 3 && pi == 2))
 		{
-			Scene::SetScene(new CSceneia(pi,pl,b_pp));
+			//マウスのボタンが押されたらメインに遷移
+			if (m_mou_l == true)
+			{
+				Scene::SetScene(new CSceneca(pi, pl, b_pp));//正解
+				//Scene::SetScene(new CSceneia(pi,pl,b_pp));
+			}
+		}
+		else
+		{
+			if (m_mou_l == true)
+			{
+				Scene::SetScene(new CSceneia(pi, pl, b_pp));//不正解
+			}
 		}
 	}
+	
 }
 
 //ドロー
 void CObjMain::Draw()
 {
+	float c[4] = { 1,1,1,1 };
 
+	Font::StrDraw(L"1P::Fキーまたは2P::Jキーで回答権獲得", 140, 300, 30, c);
 }
