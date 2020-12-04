@@ -125,5 +125,7 @@ void CObjMain::Action()
 //ドロー
 void CObjMain::Draw()
 {
+	float c[4] = { 1,1,1,1 };
 
+	Font::StrDraw(L"1P::Fキーまたは2P::Jキーで回答権獲得", 140, 300, 30, c);
 }
