@@ -43,6 +43,9 @@ void CObjSelect::Init()
 
 	flag = false;
 
+	Victory1_flag = false;
+	Victory2_flag = false;
+
 	for (int i = 0; i < 4; i++)
 	{
 		for (int j = 0; j < 4; j++)
@@ -66,24 +69,27 @@ void CObjSelect::Action()
 	//マウスのボタンの状態
 	m_mou_l = Input::GetMouButtonL();
 
-
-	//マウスの位置とクリックする場所で当たり判定
-	if (m_mou_x >= 295 && m_mou_x <= 665 && m_mou_y >= 185 && m_mou_y <= 555 && m_mou_l == true)
+	if (Victory1_flag == false || Victory2_flag == false)
 	{
-		pi = ((int)m_mou_x - 295) / 100;
 
-		pl = ((int)m_mou_y - 185) / 100;
-
-		if ((((int)m_mou_x - 295) - pi * 30) / 70 != pi)
-			;
-		else if ((((int)m_mou_y - 185) - pl * 30) / 70 != pl)
-			;
-		else
+		//マウスの位置とクリックする場所で当たり判定
+		if (m_mou_x >= 295 && m_mou_x <= 665 && m_mou_y >= 185 && m_mou_y <= 555 && m_mou_l == true)
 		{
-			if (b_pp[(pi * 4) + pl] == 0)
-				Scene::SetScene(new CSceneMain(pi, pl, b_pp));
-		}
+			pi = ((int)m_mou_x - 295) / 100;
 
+			pl = ((int)m_mou_y - 185) / 100;
+
+			if ((((int)m_mou_x - 295) - pi * 30) / 70 != pi)
+				;
+			else if ((((int)m_mou_y - 185) - pl * 30) / 70 != pl)
+				;
+			else
+			{
+				if (b_pp[(pi * 4) + pl] == 0)
+					Scene::SetScene(new CSceneMain(pi, pl, b_pp));
+			}
+
+		}
 	}
 	
 	
@@ -108,7 +114,7 @@ void CObjSelect::Action()
 			}
 			if (count1 == 4)//横
 			{
-				
+				Victory1_flag = true;
 			}
 			else
 			{
@@ -116,7 +122,7 @@ void CObjSelect::Action()
 			}
 			if (count2 == 4)//縦
 			{
-
+				Victory1_flag = true;
 			}
 			else
 			{
@@ -136,7 +142,7 @@ void CObjSelect::Action()
 			}
 			if (count1 == 4)
 			{
-
+				Victory1_flag = true;
 			}
 			else
 			{
@@ -144,7 +150,7 @@ void CObjSelect::Action()
 			}
 			if (count2== 4)
 			{
-
+				Victory1_flag = true;
 			}
 			else
 			{
@@ -172,8 +178,12 @@ void CObjSelect::Draw()
 	float x = 0;
 	float y = 0;
 
-   //説明
-   Font::StrDraw(L"ジャンルを選択してください", 125, 60, 45, c);
+	if (Victory1_flag == false && Victory2_flag == false)
+	{
+		//説明
+		Font::StrDraw(L"ジャンルを選択してください", 125, 60, 45, c);
+	}
+ 
    
    //ジャンルをクリックする場所
    Font::StrDraw(L"国語", 100, 200, 30, c);
@@ -227,6 +237,11 @@ void CObjSelect::Draw()
 		  y = 0;
 		  x += 100;
 	  }
+   }
+
+   if (Victory1_flag==true)
+   {
+	   Font::StrDraw(L"1P勝ち", 225, 60, 100, c);
    }
 }
 
