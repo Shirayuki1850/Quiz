@@ -42,11 +42,11 @@ void CObjMain::Init()
 void CObjMain::Action()
 {
 
-	if (Input::GetVKey('F') == true&&f==false) //1P
+	if (Input::GetVKey('F') == true&&f==false && f2 == false) //1P
 	{
 
 		f = true;
-		f2 = false;
+		b_pp[(pi * 4) + pl] = 1;
 	}
 	if (f == true)
 	{
@@ -55,11 +55,10 @@ void CObjMain::Action()
 		Font::StrDraw(L"1P答えをどうぞ。", 210, 350, 50, c1);
 	}
 
-	if (Input::GetVKey('J') == true &&f2==false)//2P
+	if (Input::GetVKey('J') == true && f == false &&f2==false)//2P
 	{
 		f2 = true;
-		f = false;
-		
+		b_pp[(pi * 4) + pl] = 2;
 	}
 	if (f2 == true)
 	{
@@ -68,11 +67,6 @@ void CObjMain::Action()
 		Font::StrDraw(L"2P答えをどうぞ。", 210, 400, 50, c2);
 	}
 
-	if (Input::GetVKey(VK_SPACE) == true)
-	{
-		f = false;
-		f2 = false;
-	}
 	//マウスの位置を取得
 	m_mou_x = (float)Input::GetPosX();
 	m_mou_y = (float)Input::GetPosY();

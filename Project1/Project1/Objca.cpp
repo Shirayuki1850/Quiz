@@ -46,7 +46,7 @@ void CObjca::Action()
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
 		{
-			b_pp[(px*4) + py] = 1;
+			//b_pp[(px*4) + py] = 1;
 			Scene::SetScene(new CSelectScene(px,py,b_pp));
 		}
 	}
