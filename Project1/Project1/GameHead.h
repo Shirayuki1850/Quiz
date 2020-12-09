@@ -10,6 +10,7 @@ enum OBJ_NAME
 	OBJ_MOUSE,
 	OBJ_MAIN,
 	OBJ_SEIGO,
+	OBJ_BACKGROUND
 };
 //------------------------------------------------
 
@@ -59,6 +60,7 @@ struct UserData
 #include "ObjMain.h"
 #include "Objca.h"
 #include "Objia.h"
+#include "ObjBackground.h"
 
 //------------------------------------------------
 

@@ -1,10 +1,12 @@
 //使用するヘッダーファイル
 #include "GameL/DrawFont.h"
 #include "GameL/WinInputs.h"
-
+#include"GameL\DrawTexture.h"
 #include "GameHead.h"
 #include "ObjTitle.h"
 #include "SceneMain.h"
+#include "SelectScene.h"
+#include "ObjBackground.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -51,6 +53,7 @@ void CObjTitle::Action()
 //ドロー
 void CObjTitle::Draw()
 {
+
 	float c[4] = { 1,1,1,1 };
 
 	/*//仮マウス位置表示
@@ -62,5 +65,7 @@ void CObjTitle::Draw()
 	Font::StrDraw(L"繋がりクイズ", 130, 180, 95, c);
 
 	Font::StrDraw(L"Click Start", 225, 400, 64, c);
+
+	
 
 }

@@ -6,6 +6,7 @@
 #include "GameL/SceneObjManager.h"
 #include "GameL/DrawFont.h"
 #include "GameL/WinInputs.h"
+#include"GameL\DrawTexture.h"
 
 
 //使用するネームスペース
@@ -15,6 +16,7 @@ using namespace GameL;
 #include "SceneMain.h"
 #include "GameHead.h"
 #include "ObjTitle.h"
+#include "ObjBackground.h"
 
 //コンストラクタ
 CSceneTitle::CSceneTitle()
@@ -31,6 +33,8 @@ CSceneTitle::~CSceneTitle()
 //ゲームメイン初期化メソッド
 void CSceneTitle::InitScene()
 {
+	Draw::LoadImage(L"Title1.png", 20, TEX_SIZE_1024);
+
 	//出力させる文字のグラフィック作成
 	Font::SetStrTex(L"繋がりクイズ");
 
@@ -38,6 +42,9 @@ void CSceneTitle::InitScene()
 	CObjTitle*obj = new CObjTitle();     //タイトルオブジェクト作成
 	Objs::InsertObj(obj, OBJ_TITLE, 10);
 
+	//背景オブジェクト作成
+	CObjBackground* back = new CObjBackground();
+	Objs::InsertObj(back, OBJ_BACKGROUND, 1);
 	
 }
 

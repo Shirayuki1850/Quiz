@@ -19,7 +19,8 @@ private:
 	bool  m_mou_l; //マウスの左ボタン
 	bool f;
 	bool f2;
-	
+	wchar_t str1[100][100];
+	wchar_t str2[100];
 
 	int pi;
 	int pl;

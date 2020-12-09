@@ -11,8 +11,10 @@
 using namespace GameL;
 
 //使用ヘッダー
+
 #include "SelectScene.h"
 #include "GameHead.h"
+#include "ObjBackground.h"
 
 //コンストラクタ
 CSelectScene::CSelectScene(int x,int y,int pp[16])
@@ -52,9 +54,16 @@ void CSelectScene::InitScene()
 	Draw::LoadImage(L"game4.png", 17, TEX_SIZE_1024);
 	Draw::LoadImage(L"panel1.png", 18, TEX_SIZE_1024);
 	Draw::LoadImage(L"panel2.png", 19, TEX_SIZE_1024);
+	Draw::LoadImage(L"Select1.png", 20, TEX_SIZE_1024);
+	Draw::LoadImage(L"Select1.png", 21, TEX_SIZE_1024);
+	Draw::LoadImage(L"q1.png", 22, TEX_SIZE_1024);
 
 	CObjSelect* p = new CObjSelect(px,py,b_pp);
 	Objs::InsertObj(p, OBJ_TITLE, 1);
+
+	//背景オブジェクト作成
+	CObjBackground* back = new CObjBackground();
+	Objs::InsertObj(back, OBJ_BACKGROUND, 1);
 }
 
 //ゲームタイトル実行メソッド

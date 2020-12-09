@@ -28,6 +28,9 @@
     <Filter Include="ソース ファイル\マウス">
       <UniqueIdentifier>{f99103ed-82e0-4598-9ae1-12f59a8e15d1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\背景">
+      <UniqueIdentifier>{c362fe30-7770-4582-a6a5-1c918e92cddf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SceneMain.cpp">
@@ -108,6 +111,9 @@
     <ClCompile Include="UtilityModule.cpp">
       <Filter>ソース ファイル\マウス</Filter>
     </ClCompile>
+    <ClCompile Include="ObjBackground.cpp">
+      <Filter>ソース ファイル\背景</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SceneMain.h">
@@ -187,6 +193,9 @@
     </ClInclude>
     <ClInclude Include="Objia.h">
       <Filter>ソース ファイル\不正解</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjBackground.h">
+      <Filter>ソース ファイル\背景</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -7,7 +7,7 @@
 #include "GameL/WinInputs.h"
 #include "GameL/SceneManager.h"
 #include "GameL/\DrawFont.h"
-
+#include "GameL/\DrawTexture.h"
 #include "ObjMain.h"
 #include "GameHead.h"
 
@@ -36,6 +36,69 @@ void CObjMain::Init()
 
 	f = false;
 	f2 = false;
+	FILE* fp = 0;
+	switch (pl)
+	{
+	case 0:
+		switch (pi)
+		{
+		case 0: fopen_s(&fp, "Quiz1.txt", "rb");
+			break;
+		case 1: fopen_s(&fp, "Quiz2.txt", "rb");
+			break;
+		case 2: fopen_s(&fp, "Quiz3.txt", "rb");
+			break;
+		case 3: fopen_s(&fp, "Quiz4.txt", "rb");
+			break;
+		}
+		break;
+
+	case 1:
+		switch (pi)
+		{
+		case 0: fopen_s(&fp, "Quiz5.txt", "rb");
+			break;
+		case 1: fopen_s(&fp, "Quiz6.txt", "rb");
+			break;
+		case 2: fopen_s(&fp, "Quiz7.txt", "rb");
+			break;
+		case 3: fopen_s(&fp, "Quiz8.txt", "rb");
+			break;
+		}
+		break;
+	case 2:
+		switch (pi)
+		{
+		case 0: fopen_s(&fp, "Quiz9.txt", "rb");
+			break;
+		case 1: fopen_s(&fp, "Quiz10.txt", "rb");
+			break;
+		case 2: fopen_s(&fp, "Quiz11.txt", "rb");
+			break;
+		case 3: fopen_s(&fp, "Quiz12.txt", "rb");
+			break;
+		}
+		break;
+	case 3:
+		switch (pi)
+		{
+		case 0: fopen_s(&fp, "Quiz13.txt", "rb");
+			break;
+		case 1: fopen_s(&fp, "Quiz14.txt", "rb");
+			break;
+		case 2: fopen_s(&fp, "Quiz15.txt", "rb");
+			break;
+		case 3: fopen_s(&fp, "Quiz16.txt", "rb");
+			break;
+		}
+		break;
+
+	}
+	for (int i = 0; i < 100; i++)
+		fgetws(str1[i], 99, fp);
+
+	fclose(fp);
+
 }
 
 //アクション
@@ -48,12 +111,7 @@ void CObjMain::Action()
 		f = true;
 		f2 = false;
 	}
-	if (f == true)
-	{
-		float c1[4] = { 1,0,0,1 };
-
-		Font::StrDraw(L"1P答えをどうぞ。", 210, 350, 50, c1);
-	}
+	
 
 	if (Input::GetVKey('J') == true &&f2==false)//2P
 	{
@@ -61,13 +119,7 @@ void CObjMain::Action()
 		f = false;
 		
 	}
-	if (f2 == true)
-	{
-		float c2[4] = { 0,0.6,1,1 };
-
-		Font::StrDraw(L"2P答えをどうぞ。", 210, 400, 50, c2);
-	}
-
+	
 	if (Input::GetVKey(VK_SPACE) == true)
 	{
 		f = false;
@@ -166,7 +218,31 @@ void CObjMain::Action()
 //ドロー
 void CObjMain::Draw()
 {
+
+	int x = 0;
 	float c[4] = { 1,1,1,1 };
+	for (int i = 0; i < 5; i++)
+	{
+		swprintf(str2, L"%s", str1[i]);
+		Font::StrDraw(str2, 0, 5 * i + x, 25, c);
+
+		x += 50;
+	}
+	
 
 	Font::StrDraw(L"1P::Fキーまたは2P::Jキーで回答権獲得", 140, 300, 30, c);
+	if (f == true)
+	{
+		float c1[4] = { 1,0,0,1 };
+
+		Font::StrDraw(L"1P答えをどうぞ。", 210, 350, 50, c1);
+	}
+	
+	if (f2 == true)
+	{
+		float c2[4] = { 0,0.6,1,1 };
+
+		Font::StrDraw(L"2P答えをどうぞ。", 210, 400, 50, c2);
+	}
+
 }
