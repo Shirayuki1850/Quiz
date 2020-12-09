@@ -206,7 +206,7 @@ void CObjSelect::Draw()
    {
 	  if (b_pp[i] == 1)
 	  {
-		  float c1[4] = { 1.0f,0.0f,0.0f,1.0f };
+		 // float c1[4] = { 1.0f,0.0f,0.0f,1.0f };
 		  RECT_F src1;
 		  RECT_F dst1;
 
@@ -220,7 +220,25 @@ void CObjSelect::Draw()
 		  dst1.m_right = 370.0f + x;
 		  dst1.m_bottom = 260.0f + y;
 
-		  Draw::Draw(18, &src1, &dst1, c1, 0);
+		  Draw::Draw(18, &src1, &dst1, c, 0);
+	  }
+	  else if (b_pp[i] == 2)
+	  {
+		// float c1[4] = { 1.0f,0.0f,0.0f,1.0f };
+		  RECT_F src1;
+		  RECT_F dst1;
+
+		  src1.m_top = 0.0f;
+		  src1.m_left = 0.0f;
+		  src1.m_right = 128.0f;
+		  src1.m_bottom = 128.0f;
+
+		  dst1.m_top = 190.0f + y;
+		  dst1.m_left = 300.0f + x;
+		  dst1.m_right = 370.0f + x;
+		  dst1.m_bottom = 260.0f + y;
+
+		  Draw::Draw(19, &src1, &dst1, c, 0);
 	  }
 	  else
 	  {
