@@ -34,4 +34,7 @@ private:
 
 	int ab_pp[4][4];
 
+	bool Victory1_flag;
+	bool Victory2_flag;
+
 };
