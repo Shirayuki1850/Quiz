@@ -54,7 +54,7 @@ void CSelectScene::InitScene()
 	Draw::LoadImage(L"game4.png", 17, TEX_SIZE_128);
 	Draw::LoadImage(L"panel1.png", 18, TEX_SIZE_128);
 	Draw::LoadImage(L"panel2.png", 19, TEX_SIZE_128);
-	Draw::LoadImage(L"Select1.png", 20, TEX_SIZE_1024);
+	Draw::LoadImage(L"Select2.png", 20, TEX_SIZE_1024);
 
 	CObjSelect* p = new CObjSelect(px,py,b_pp);
 	Objs::InsertObj(p, OBJ_TITLE, 1);

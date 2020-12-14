@@ -5,6 +5,7 @@
 //GameLで使用するヘッダー
 #include "GameL/SceneObjManager.h"
 #include "GameL/DrawFont.h"
+#include "GameL/DrawTexture.h"
 #include "GameL/WinInputs.h"
 
 
@@ -37,6 +38,12 @@ CSceneia::~CSceneia()
 //ゲームメイン初期化メソッド
 void CSceneia::InitScene()
 {
+	Draw::LoadImage(L"Seigo1.png", 20, TEX_SIZE_1024);
+
+	//背景オブジェクト作成
+	CObjBackground* back = new CObjBackground();
+	Objs::InsertObj(back, OBJ_BACKGROUND, 0);
+
 	//出力させる文字のグラフィック作成
 	Font::SetStrTex(L"残念、不正解。。");
 
