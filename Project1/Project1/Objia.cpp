@@ -53,7 +53,7 @@ void CObjia::Action()
 //ÉhÉçÅ[
 void CObjia::Draw()
 {
-	float c1[4] = { 0,0,1,1 };
+	float c1[4] = {1,1,0,1 };
 
 	float c[4] = { 1,1,1,1 };
 
