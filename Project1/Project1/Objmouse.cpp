@@ -18,7 +18,7 @@ void CObjmouse::Init()
 {
 
 	//マウスのグラフィック読み込み
-	//Draw::LoadImage(L"mouse1.png", 1, TEX_SIZE_1024);
+	Draw::LoadImage(L"mouse1.png", 1, TEX_SIZE_1024);
 
 
 	x = 0;  //主人公のX軸位置情報
@@ -70,10 +70,10 @@ void CObjmouse::Draw()
 	src.m_bottom = 1024.0f;
 
 	//表示位置の設定
-	dst.m_top = -20.0f + m_mou_py;
+	dst.m_top = 0.0f + m_mou_py;
 	dst.m_left = -16.0f + m_mou_px;
 	dst.m_right = 32.0f + m_mou_px;
-	dst.m_bottom = 28.0f + m_mou_py;
+	dst.m_bottom = 48.0f + m_mou_py;
 
 
 

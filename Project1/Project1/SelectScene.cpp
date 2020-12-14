@@ -62,6 +62,10 @@ void CSelectScene::InitScene()
 	//背景オブジェクト作成
 	CObjBackground* back = new CObjBackground();
 	Objs::InsertObj(back, OBJ_BACKGROUND, 1);
+
+	//カーソル作成
+	CObjmouse* obj = new CObjmouse();
+	Objs::InsertObj(obj, OBJ_MOUSE, 2);
 }
 
 //ゲームタイトル実行メソッド

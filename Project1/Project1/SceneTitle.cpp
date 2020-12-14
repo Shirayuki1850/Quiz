@@ -45,6 +45,10 @@ void CSceneTitle::InitScene()
 	//背景オブジェクト作成
 	CObjBackground* back = new CObjBackground();
 	Objs::InsertObj(back, OBJ_BACKGROUND, 1);
+
+	//カーソル作成
+	CObjmouse* obj1 = new CObjmouse();
+	Objs::InsertObj(obj1, OBJ_MOUSE, 2);
 	
 }
 

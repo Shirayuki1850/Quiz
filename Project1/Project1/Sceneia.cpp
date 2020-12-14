@@ -50,6 +50,10 @@ void CSceneia::InitScene()
 	//不正解オブジェクト作成
 	CObjia* objj = new CObjia(pi,pl,b_pp);     
 	Objs::InsertObj(objj, OBJ_SEIGO, 10);
+
+	//カーソル作成
+	CObjmouse* obj = new CObjmouse();
+	Objs::InsertObj(obj, OBJ_MOUSE, 2);
 }
 
 //ゲームメイン実行中メソッド
