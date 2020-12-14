@@ -36,7 +36,7 @@ void CSceneTitle::InitScene()
 	Draw::LoadImage(L"Title1.png", 20, TEX_SIZE_1024);
 
 	//出力させる文字のグラフィック作成
-	Font::SetStrTex(L"繋がりクイズ");
+	Font::SetStrTex(L"Re：Panel Connection");
 
 	//タイトルオブジェクト作成
 	CObjTitle*obj = new CObjTitle();     //タイトルオブジェクト作成

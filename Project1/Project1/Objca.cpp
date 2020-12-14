@@ -60,8 +60,8 @@ void CObjca::Draw()
 	float c[4] = { 1,1,1,1 };
 
 	//タイトル
-	Font::StrDraw(L"正解!!", 205, 170, 130, c1);
+	Font::StrDraw(L"正解!!", 200, 160, 150, c1);
 
-	Font::StrDraw(L"パネルへ戻る", 200, 380, 70, c);
+	Font::StrDraw(L"パネル選択へ戻る", 140, 380, 70, c);
 
 }

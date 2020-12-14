@@ -62,7 +62,7 @@ void CObjTitle::Draw()
 	Font::StrDraw(str, 20, 20, 12, c);*/
 
 	//タイトル
-	Font::StrDraw(L"繋がりクイズ", 130, 180, 95, c);
+	Font::StrDraw(L"Re：Panel Connection", 35, 200, 75, c);
 
 	Font::StrDraw(L"Click Start", 225, 400, 64, c);
 
