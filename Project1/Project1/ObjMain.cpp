@@ -243,7 +243,7 @@ void CObjMain::Draw()
 	
 	if (f2 == true)
 	{
-		float c2[4] = { 0,0.6,1,1 };
+		float c2[4] = { 0,0,1,1 };
 
 		Font::StrDraw(L"2P“š‚¦‚ğ‚Ç‚¤‚¼B", 210, 400, 50, c2);
 	}
