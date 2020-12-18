@@ -133,6 +133,9 @@ void CObjSelect::Action()
 			}
 		}
 		
+		count1 = 0;
+		count2 = 0;
+
 		for (int i = 0; i < 4; i++)//ŽÎ‚ß‚ÌŸ—˜ðŒ
 		{
 			if (ab_pp[i][i] == 1)
@@ -147,19 +150,12 @@ void CObjSelect::Action()
 			{
 				Victory1_flag = true;
 			}
-			else
-			{
-				count1 = 0;
-			}
 			if (count2== 4)
 			{
 				Victory1_flag = true;
 			}
-			else
-			{
-				count2 = 0;
-			}
 		}
+
 		
 		for (int i = 0; i < 4; i++)
 		{
@@ -192,6 +188,9 @@ void CObjSelect::Action()
 			}
 		}
 
+		count3 = 0;
+		count4 = 0;
+
 		for (int i = 0; i < 4; i++)//ŽÎ‚ß‚ÌŸ—˜ðŒ
 		{
 			if (ab_pp[i][i] == 2)
@@ -206,17 +205,9 @@ void CObjSelect::Action()
 			{
 				Victory2_flag = true;
 			}
-			else
-			{
-				count3 = 0;
-			}
 			if (count4 == 4)
 			{
 				Victory2_flag = true;
-			}
-			else
-			{
-				count4 = 0;
 			}
 		}
 
