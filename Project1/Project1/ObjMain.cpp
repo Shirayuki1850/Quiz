@@ -184,7 +184,6 @@ void CObjMain::Action()
 			if (m_mou_l == true)
 			{
 				Scene::SetScene(new CSceneca(pi, pl, b_pp));//ê≥â
-				//Scene::SetScene(new CSceneia(pi,pl,b_pp));
 			}
 		}	
 		else
@@ -204,7 +203,6 @@ void CObjMain::Action()
 			if (m_mou_l == true)
 			{
 				Scene::SetScene(new CSceneca(pi, pl, b_pp));//ê≥â
-				//Scene::SetScene(new CSceneia(pi,pl,b_pp));
 			}
 		}
 		else
