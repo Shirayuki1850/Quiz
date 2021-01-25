@@ -34,6 +34,8 @@ void CObjMain::Init()
 	m_mou_y = 0.0f;
 	m_mou_l = false;
 
+	Answer_lock = false;
+
 	f = false;
 	f2 = false;
 	FILE* fp = 0;
@@ -110,6 +112,8 @@ void CObjMain::Action()
 
 		f = true;
 		b_pp[(pi * 4) + pl] = 1;
+		Answer_lock = true;
+
 	}
 	
 
@@ -117,6 +121,7 @@ void CObjMain::Action()
 	{
 		f2 = true;
 		f = false;
+		Answer_lock = true;
 		
 		b_pp[(pi * 4) + pl] = 2;
 	}
@@ -130,7 +135,7 @@ void CObjMain::Action()
 
 
 	//マウスの位置とクリックする場所で当たり判定(選択肢１)
-	if (Input::GetVKey('J')==true || Input::GetVKey('F') == true)
+	if (Answer_lock == true)
 	{
 
 		if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>60 && m_mou_y < 70)
