@@ -60,7 +60,6 @@ void CObjSelect::Action()
 {
 	CObjca* objgqsl = (CObjca*)Objs::GetObj(OBJ_SEIGO);
 
-	//objgqsl->SelectPanel(flag);
 
 	//マウスの位置を取得
 	m_mou_x = (float)Input::GetPosX();
@@ -69,7 +68,7 @@ void CObjSelect::Action()
 	//マウスのボタンの状態
 	m_mou_l = Input::GetMouButtonL();
 
-	if (Victory1_flag == false || Victory2_flag == false)
+	if (Victory1_flag == false && Victory2_flag == false)
 	{
 
 		//マウスの位置とクリックする場所で当たり判定

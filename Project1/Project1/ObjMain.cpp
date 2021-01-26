@@ -137,7 +137,7 @@ void CObjMain::Action()
 
 
 	//マウスの位置とクリックする場所で当たり判定(選択肢１)
-	if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>60 && m_mou_y < 70)
+	if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>60 && m_mou_y < 70)
 	{
 		if ((pl == 0 && pi == 0) || (pl == 0 && pi == 3) || (pl == 2 && pi == 1) || (pl == 3 && pi == 1))
 		{
@@ -157,7 +157,7 @@ void CObjMain::Action()
 
 	}
 	//マウスの位置とクリックする場所で当たり判定（選択肢２）
-	else if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>115 && m_mou_y < 125)
+	else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>115 && m_mou_y < 125)
 	{
 		if ((pl == 0 && pi == 2) || (pl == 1 && pi == 2) || (pl == 2 && pi == 0) || (pl == 3 && pi == 0))
 		{
@@ -176,7 +176,7 @@ void CObjMain::Action()
 		}
 	}
 	//マウスの位置とクリックする場所で当たり判定（選択肢３）
-	else if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>170 && m_mou_y < 180)
+	else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>170 && m_mou_y < 180)
 	{
 		if ((pl == 0 && pi == 1) || (pl == 1 && pi == 1) || (pl == 2 && pi == 3) || (pl == 3 && pi == 3))
 		{
@@ -184,7 +184,6 @@ void CObjMain::Action()
 			if (m_mou_l == true)
 			{
 				Scene::SetScene(new CSceneca(pi, pl, b_pp));//正解
-				//Scene::SetScene(new CSceneia(pi,pl,b_pp));
 			}
 		}	
 		else
@@ -196,7 +195,7 @@ void CObjMain::Action()
 		}
 	}
 	//マウスの位置とクリックする場所で当たり判定（選択肢４）
-	else if (m_mou_x > 7 && m_mou_x < 15 && m_mou_y>225 && m_mou_y < 235)
+	else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>225 && m_mou_y < 235)
 	{
 		if ((pl == 1 && pi == 0) || (pl == 1 && pi == 3) || (pl == 2 && pi == 2) || (pl == 3 && pi == 2))
 		{
@@ -204,7 +203,6 @@ void CObjMain::Action()
 			if (m_mou_l == true)
 			{
 				Scene::SetScene(new CSceneca(pi, pl, b_pp));//正解
-				//Scene::SetScene(new CSceneia(pi,pl,b_pp));
 			}
 		}
 		else
@@ -247,5 +245,13 @@ void CObjMain::Draw()
 
 		Font::StrDraw(L"2P答えをどうぞ。", 210, 400, 50, c2);
 	}
+
+	/*
+	//仮マウス位置表示
+	
+	wchar_t str[256];
+	swprintf_s(str, L"x=%f,y=%f", m_mou_x, m_mou_y);
+	Font::StrDraw(str, 20, 20, 12, c);
+	*/
 
 }
