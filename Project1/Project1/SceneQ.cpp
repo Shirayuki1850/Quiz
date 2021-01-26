@@ -13,7 +13,7 @@ using namespace GameL;
 #include "SelectScene.h"
 #include "GameHead.h"
 
-//コンストラクタ
+/*//コンストラクタ
 CSelectScene::CSelectScene()
 {
 
@@ -24,6 +24,7 @@ CSelectScene::~CSelectScene()
 {
 
 }
+*/
 
 //セレクトタイトル初期化メソッド
 void CSelectScene::InitScene()
