@@ -48,7 +48,7 @@ void CSceneca::InitScene()
 
 	//正解オブジェクト作成
 	CObjca* obji = new CObjca(px,py,b_pp);     
-	Objs::InsertObj(obji, OBJ_SEIGO, 10);
+	Objs::InsertObj(obji, OBJ_SEIGO, 1);
 
 	//カーソル作成
 	CObjmouse* obj = new CObjmouse();
