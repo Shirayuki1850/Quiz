@@ -60,7 +60,6 @@ void CObjSelect::Action()
 {
 	CObjca* objgqsl = (CObjca*)Objs::GetObj(OBJ_SEIGO);
 
-	//objgqsl->SelectPanel(flag);
 
 	//マウスの位置を取得
 	m_mou_x = (float)Input::GetPosX();
@@ -85,8 +84,9 @@ void CObjSelect::Action()
 				;
 			else
 			{
+				
 				if (b_pp[(pi * 4) + pl] == 0)
-					Scene::SetScene(new CSceneMain(pi, pl, b_pp));
+					Scene::SetScene(new CSceneMain(pi, pl, b_pp, 5));
 			}
 
 		}

@@ -18,7 +18,7 @@ using namespace GameL;
 #include "Objia.h"
 
 //コンストラクタ
-CSceneia::CSceneia(int x,int y,int pp[16])
+CSceneia::CSceneia(int x,int y,int pp[16],int m)
 {
 	pi = x;
 	pl = y;
@@ -27,6 +27,7 @@ CSceneia::CSceneia(int x,int y,int pp[16])
 	{
 		b_pp[i] = pp[i];
 	}
+	mam = m;
 }
 
 //デストラクタ
@@ -45,11 +46,11 @@ void CSceneia::InitScene()
 	Objs::InsertObj(back, OBJ_BACKGROUND, 0);
 
 	//出力させる文字のグラフィック作成
-	Font::SetStrTex(L"残念、不正解。。");
+	Font::SetStrTex(L"残念、不正解");
 
 	//不正解オブジェクト作成
-	CObjia* objj = new CObjia(pi,pl,b_pp);     
-	Objs::InsertObj(objj, OBJ_SEIGO, 10);
+	CObjia* objj = new CObjia(pi, pl, b_pp, mam);
+	Objs::InsertObj(objj, OBJ_SEIGO, 1);
 
 	//カーソル作成
 	CObjmouse* obj = new CObjmouse();

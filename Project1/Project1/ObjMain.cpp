@@ -10,13 +10,13 @@
 #include "GameL/\DrawTexture.h"
 #include "ObjMain.h"
 #include "GameHead.h"
-
+#include <time.h>
 
 //使用するネームスペース
 using namespace GameL;
 
 //コンストラクタ
-CObjMain::CObjMain(float x, float y,int pp[16])
+CObjMain::CObjMain(float x, float y,int pp[16],int m)
 {
 	pi = x;
 	pl = y;
@@ -24,7 +24,7 @@ CObjMain::CObjMain(float x, float y,int pp[16])
 	{
 		b_pp[i] = pp[i];
 	}
-	
+	mam = m;
 }
 
 //イニシャライズ
@@ -39,10 +39,17 @@ void CObjMain::Init()
 	f = false;
 	f2 = false;
 	FILE* fp = 0;
+
+
+	if (mam == 5)
+	{
+		mam = rand() % 4;
+	}
+
 	switch (pl)
 	{
 	case 0:
-		switch (pi)
+		switch (mam)
 		{
 		case 0: fopen_s(&fp, "Quiz1.txt", "rb");
 			break;
@@ -53,10 +60,11 @@ void CObjMain::Init()
 		case 3: fopen_s(&fp, "Quiz4.txt", "rb");
 			break;
 		}
+
 		break;
 
 	case 1:
-		switch (pi)
+		switch (mam)
 		{
 		case 0: fopen_s(&fp, "Quiz5.txt", "rb");
 			break;
@@ -69,7 +77,7 @@ void CObjMain::Init()
 		}
 		break;
 	case 2:
-		switch (pi)
+		switch (mam)
 		{
 		case 0: fopen_s(&fp, "Quiz9.txt", "rb");
 			break;
@@ -82,7 +90,7 @@ void CObjMain::Init()
 		}
 		break;
 	case 3:
-		switch (pi)
+		switch (mam)
 		{
 		case 0: fopen_s(&fp, "Quiz13.txt", "rb");
 			break;
@@ -94,8 +102,10 @@ void CObjMain::Init()
 			break;
 		}
 		break;
-
 	}
+
+
+
 	for (int i = 0; i < 100; i++)
 		fgetws(str1[i], 99, fp);
 
@@ -224,14 +234,14 @@ void CObjMain::Action()
 void CObjMain::Draw()
 {
 
-	int x = 0;
+	int y = 0;
 	float c[4] = { 1,1,1,1 };
 	for (int i = 0; i < 5; i++)
 	{
 		swprintf(str2, L"%s", str1[i]);
-		Font::StrDraw(str2, 0, 5 * i + x, 25, c);
+		Font::StrDraw(str2, 0, 5 * i + y, 25, c);
 
-		x += 50;
+		y += 50;
 	}
 	
 

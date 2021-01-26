@@ -9,7 +9,7 @@ using namespace GameL;
 class CSceneMain :public CScene
 {
 public:
-	CSceneMain(int x,int y,int pp[16]);
+	CSceneMain(int x,int y,int pp[16],int m);
 	~CSceneMain();
 	void InitScene();
 	void Scene();
@@ -27,4 +27,6 @@ private:
 	bool  m_mou_l; //マウスの左ボタン
 
 	int ans_flag[16];
+
+	int mam;
 };

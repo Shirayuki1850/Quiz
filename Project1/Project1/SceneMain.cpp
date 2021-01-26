@@ -20,7 +20,7 @@ using namespace GameL;
 
 
 //コンストラクタ
-CSceneMain::CSceneMain(int x,int y,int pp[16])
+CSceneMain::CSceneMain(int x,int y,int pp[16],int m)
 {
 	pi = x;
 	pl = y;
@@ -29,6 +29,7 @@ CSceneMain::CSceneMain(int x,int y,int pp[16])
 		ans_flag[i] = pp[i];
 	}
 	
+	mam = m;
 }
 
 //デストラクタ
@@ -48,7 +49,7 @@ void CSceneMain::InitScene()
 	CObjBackground* back = new CObjBackground();
 	Objs::InsertObj(back, OBJ_BACKGROUND, 0);
 
-	CObjMain*p = new CObjMain(pi,pl,ans_flag);
+	CObjMain* p = new CObjMain(pi, pl, ans_flag, mam);
 	Objs::InsertObj(p, OBJ_MAIN, 1);
 
 	//カーソル作成

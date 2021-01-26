@@ -18,7 +18,7 @@ void CObjia::Init()
 }
 
 //コンストラクタ
-CObjia::CObjia(float x, float y,int pp[16])
+CObjia::CObjia(float x, float y, int pp[16], int m)
 {
 	pi = x;
 	pl = y;
@@ -27,6 +27,7 @@ CObjia::CObjia(float x, float y,int pp[16])
 	{
 		b_pp[i] = pp[i];
 	}
+	mam = m;
 }
 
 //アクション
@@ -45,7 +46,7 @@ void CObjia::Action()
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)
 		{
-			Scene::SetScene(new CSceneMain(pi,pl,b_pp));
+			Scene::SetScene(new CSceneMain(pi, pl, b_pp, mam));
 		}
 	}
 }
