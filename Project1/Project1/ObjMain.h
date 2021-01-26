@@ -26,6 +26,6 @@ private:
 	int pl;
 	int b_pp[16];
 
-	
-	int mam;
+	bool Answer_lock;
+
 };
