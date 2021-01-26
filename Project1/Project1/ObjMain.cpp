@@ -38,7 +38,6 @@ void CObjMain::Init()
 	f2 = false;
 	FILE* fp = 0;
 
-
 	if (mam == 5)
 	{
 		mam = rand() % 4;
