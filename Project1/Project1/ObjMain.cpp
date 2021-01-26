@@ -147,9 +147,9 @@ void CObjMain::Action()
 	if (Answer_lock == true)
 	{
 
-		if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>60 && m_mou_y < 70)
+		if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>50 && m_mou_y < 80)
 		{
-			if ((pl == 0 && pi == 0) || (pl == 0 && pi == 3) || (pl == 2 && pi == 1) || (pl == 3 && pi == 1))
+			if ((pl == 0 && mam == 0) || (pl == 0 && mam == 3) || (pl == 2 && mam == 1) || (pl == 3 && mam == 1))
 			{
 				//マウスのボタンが押されたらメインに遷移
 				if (m_mou_l == true)
@@ -161,15 +161,15 @@ void CObjMain::Action()
 			{
 				if (m_mou_l == true)
 				{
-					Scene::SetScene(new CSceneia(pi, pl, b_pp));//不正解
+					Scene::SetScene(new CSceneia(pi, pl, b_pp,mam));//不正解
 				}
 			}
 
 		}
 		//マウスの位置とクリックする場所で当たり判定（選択肢２）
-		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>115 && m_mou_y < 125)
+		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>105 && m_mou_y < 125)
 		{
-			if ((pl == 0 && pi == 2) || (pl == 1 && pi == 2) || (pl == 2 && pi == 0) || (pl == 3 && pi == 0))
+			if ((pl == 0 && mam == 2) || (pl == 1 && mam == 2) || (pl == 2 && mam == 0) || (pl == 3 && mam == 0))
 			{
 				//マウスのボタンが押されたらメインに遷移
 				if (m_mou_l == true)
@@ -181,14 +181,14 @@ void CObjMain::Action()
 			{
 				if (m_mou_l == true)
 				{
-					Scene::SetScene(new CSceneia(pi, pl, b_pp));//不正解
+					Scene::SetScene(new CSceneia(pi, pl, b_pp,mam));//不正解
 				}
 			}
 		}
 		//マウスの位置とクリックする場所で当たり判定（選択肢３）
-		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>170 && m_mou_y < 180)
+		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>160 && m_mou_y < 180)
 		{
-			if ((pl == 0 && pi == 1) || (pl == 1 && pi == 1) || (pl == 2 && pi == 3) || (pl == 3 && pi == 3))
+			if ((pl == 0 && mam == 1) || (pl == 1 && mam == 1) || (pl == 2 && mam == 3) || (pl == 3 && mam == 3))
 			{
 				//マウスのボタンが押されたらメインに遷移
 				if (m_mou_l == true)
@@ -201,14 +201,14 @@ void CObjMain::Action()
 			{
 				if (m_mou_l == true)
 				{
-					Scene::SetScene(new CSceneia(pi, pl, b_pp));//不正解
+					Scene::SetScene(new CSceneia(pi, pl, b_pp,mam));//不正解
 				}
 			}
 		}
 		//マウスの位置とクリックする場所で当たり判定（選択肢４）
-		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>225 && m_mou_y < 235)
+		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>215 && m_mou_y < 235)
 		{
-			if ((pl == 1 && pi == 0) || (pl == 1 && pi == 3) || (pl == 2 && pi == 2) || (pl == 3 && pi == 2))
+			if ((pl == 1 && mam == 0) || (pl == 1 && mam == 3) || (pl == 2 && mam == 2) || (pl == 3 && mam == 2))
 			{
 				//マウスのボタンが押されたらメインに遷移
 				if (m_mou_l == true)
@@ -221,7 +221,7 @@ void CObjMain::Action()
 			{
 				if (m_mou_l == true)
 				{
-					Scene::SetScene(new CSceneia(pi, pl, b_pp));//不正解
+					Scene::SetScene(new CSceneia(pi, pl, b_pp,mam));//不正解
 				}
 			}
 		}
