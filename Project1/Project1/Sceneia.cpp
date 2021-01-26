@@ -46,7 +46,7 @@ void CSceneia::InitScene()
 	Objs::InsertObj(back, OBJ_BACKGROUND, 0);
 
 	//出力させる文字のグラフィック作成
-	Font::SetStrTex(L"残念、不正解。。");
+	Font::SetStrTex(L"残念、不正解");
 
 	//不正解オブジェクト作成
 	CObjia* objj = new CObjia(pi, pl, b_pp, mam);

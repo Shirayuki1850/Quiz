@@ -60,7 +60,6 @@ void CObjSelect::Action()
 {
 	CObjca* objgqsl = (CObjca*)Objs::GetObj(OBJ_SEIGO);
 
-	//objgqsl->SelectPanel(flag);
 
 	//マウスの位置を取得
 	m_mou_x = (float)Input::GetPosX();
