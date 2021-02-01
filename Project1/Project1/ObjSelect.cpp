@@ -240,9 +240,6 @@ void CObjSelect::Draw()
 		Font::StrDraw(L"ジャンルを選択してください", 125, 60, 45, c);
 	}
  
-	
-	
-   
    //ジャンルをクリックする場所
    Font::StrDraw(L"国語", 100, 200, 30, c);
 
