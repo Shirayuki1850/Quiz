@@ -34,7 +34,9 @@ private:
 
 	int ab_pp[4][4];
 
+	int Draw_point;
+
 	bool Victory1_flag;
 	bool Victory2_flag;
-
+	bool Draw_flag;
 };

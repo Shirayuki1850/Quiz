@@ -45,6 +45,9 @@ void CObjSelect::Init()
 
 	Victory1_flag = false;
 	Victory2_flag = false;
+	Draw_flag = false;
+
+	Draw_point = 0;
 
 	for (int i = 0; i < 4; i++)
 	{
@@ -109,10 +112,12 @@ void CObjSelect::Action()
 				if (ab_pp[j][i] == 1)//‰¡‚ÌŸ—˜ðŒ
 				{
 					count1++;
+					Draw_point++;
 				}
 				if (ab_pp[i][j] == 1)//c‚ÌŸ—˜ðŒ
 				{
 					count2++;
+					Draw_point++;
 				}
 			}
 			if (count1 == 4)//‰¡
@@ -141,10 +146,12 @@ void CObjSelect::Action()
 			if (ab_pp[i][i] == 1)
 			{
 				count1++;
+				Draw_point++;
 			}
 			if (ab_pp[3 - i][i] == 1)
 			{
 				count2++;
+				Draw_point++;
 			}
 			if (count1 == 4)
 			{
@@ -164,10 +171,12 @@ void CObjSelect::Action()
 				if (ab_pp[j][i] == 2)//‰¡‚ÌŸ—˜ðŒ
 				{
 					count3++;
+					Draw_point++;
 				}
 				if (ab_pp[i][j] == 2)//c‚ÌŸ—˜ðŒ
 				{
 					count4++;
+					Draw_point++;
 				}
 			}
 			if (count3 == 4)//‰¡
@@ -196,10 +205,12 @@ void CObjSelect::Action()
 			if (ab_pp[i][i] == 2)
 			{
 				count3++;
+				Draw_point++;
 			}
 			if (ab_pp[3 - i][i] == 2)
 			{
 				count4++;
+				Draw_point++;
 			}
 			if (count3 == 4)
 			{
@@ -211,7 +222,10 @@ void CObjSelect::Action()
 			}
 		}
 
-	
+		if (Draw_point==16)
+		{
+			Draw_flag = true;
+		}
 
 }
 
@@ -322,6 +336,10 @@ void CObjSelect::Draw()
 	   Font::StrDraw(L"2PŸ‚¿", 225, 60, 100, c);
    }
 
+   if (Draw_flag == true)
+   {
+	   Font::StrDraw(L"“¯“_‚Å‚·",225,60,100,c);
+   }
   
 }
 
