@@ -89,7 +89,7 @@ void CObjSelect::Action()
 			{
 				
 				if (b_pp[(pi * 4) + pl] == 0)
-					Scene::SetScene(new CSceneMain(pi, pl, b_pp, 5));
+					Scene::SetScene(new CSceneMain(pi, pl, b_pp, 9));
 			}
 
 		}
@@ -338,7 +338,9 @@ void CObjSelect::Draw()
 
    if (Draw_flag == true)
    {
-	   Font::StrDraw(L"“¯“_‚Å‚·",225,60,100,c);
+	   float c1[4] = { 0.0f,0.0f,0.0f,0.0f };
+
+	   Font::StrDraw(L"“¯“_‚Å‚·",225,60,100,c1);
    }
   
 }

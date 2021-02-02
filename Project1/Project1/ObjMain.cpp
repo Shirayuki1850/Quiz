@@ -40,9 +40,9 @@ void CObjMain::Init()
 	f2 = false;
 	FILE* fp = 0;
 
-	if (mam == 5)
+	if (mam == 9)
 	{
-		mam = rand() % 4;
+		mam = rand() % 8;
 	}
 
 	switch (pl)
@@ -58,8 +58,17 @@ void CObjMain::Init()
 			break;
 		case 3: fopen_s(&fp, "Quiz4.txt", "rb");
 			break;
+		case 4: fopen_s(&fp, "Quiz17.txt", "rb");
+			break;
+		case 5: fopen_s(&fp, "Quiz24.txt", "rb");
+			break;
+		case 6: fopen_s(&fp, "Quiz25.txt", "rb");
+			break;
+		case 7: fopen_s(&fp, "Quiz26.txt", "rb");
+			break;
+		
 		}
-
+	   
 		break;
 
 	case 1:
@@ -72,6 +81,14 @@ void CObjMain::Init()
 		case 2: fopen_s(&fp, "Quiz7.txt", "rb");
 			break;
 		case 3: fopen_s(&fp, "Quiz8.txt", "rb");
+			break;
+		case 4: fopen_s(&fp, "Quiz28.txt", "rb");
+			break;
+		case 5: fopen_s(&fp, "Quiz29.txt", "rb");
+			break;
+		case 6: fopen_s(&fp, "Quiz30.txt", "rb");
+			break;
+		case 7: fopen_s(&fp, "Quiz31.txt", "rb");
 			break;
 		}
 		break;
@@ -86,6 +103,14 @@ void CObjMain::Init()
 			break;
 		case 3: fopen_s(&fp, "Quiz12.txt", "rb");
 			break;
+		case 4: fopen_s(&fp, "Quiz18.txt", "rb");
+			break;
+		case 5: fopen_s(&fp, "Quiz19.txt", "rb");
+			break;
+		case 6: fopen_s(&fp, "Quiz20.txt", "rb");
+			break;
+		case 7: fopen_s(&fp, "Quiz21.txt", "rb");
+			break;
 		}
 		break;
 	case 3:
@@ -99,11 +124,17 @@ void CObjMain::Init()
 			break;
 		case 3: fopen_s(&fp, "Quiz16.txt", "rb");
 			break;
+		case 4: fopen_s(&fp, "Quiz22.txt", "rb");
+			break;
+		case 5: fopen_s(&fp, "Quiz23.txt", "rb");
+			break;
+		case 6: fopen_s(&fp, "Quiz32.txt", "rb");
+			break;
+		case 7: fopen_s(&fp, "Quiz33.txt", "rb");
+			break;
 		}
 		break;
 	}
-
-
 
 	for (int i = 0; i < 100; i++)
 		fgetws(str1[i], 99, fp);
@@ -149,7 +180,7 @@ void CObjMain::Action()
 
 		if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>50 && m_mou_y < 80)
 		{
-			if ((pl == 0 && mam == 0) || (pl == 0 && mam == 3) || (pl == 2 && mam == 1) || (pl == 3 && mam == 1))
+			if ((pl == 0 && mam == 0) || (pl == 0 && mam == 3) || (pl == 0 && mam == 4)|| (pl == 0 && mam == 7)|| (pl == 1 && mam == 7)||(pl == 2 && mam == 1) || (pl == 2 && mam == 5)|| (pl == 2 && mam == 7)|| (pl == 3 && mam == 1))
 			{
 				//マウスのボタンが押されたらメインに遷移
 				if (m_mou_l == true)
@@ -169,7 +200,7 @@ void CObjMain::Action()
 		//マウスの位置とクリックする場所で当たり判定（選択肢２）
 		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>105 && m_mou_y < 125)
 		{
-			if ((pl == 0 && mam == 2) || (pl == 1 && mam == 2) || (pl == 2 && mam == 0) || (pl == 3 && mam == 0))
+			if ((pl == 0 && mam == 2) || (pl == 0 && mam == 5)|| (pl == 1 && mam == 4)||(pl == 1 && mam == 2) || (pl == 2 && mam == 0) || (pl == 2 && mam == 4)|| (pl == 3 && mam == 0)|| (pl == 3 && mam == 1))
 			{
 				//マウスのボタンが押されたらメインに遷移
 				if (m_mou_l == true)
@@ -188,7 +219,7 @@ void CObjMain::Action()
 		//マウスの位置とクリックする場所で当たり判定（選択肢３）
 		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>160 && m_mou_y < 180)
 		{
-			if ((pl == 0 && mam == 1) || (pl == 1 && mam == 1) || (pl == 2 && mam == 3) || (pl == 3 && mam == 3))
+			if ((pl == 0 && mam == 1) || (pl == 0 && mam == 6)|| (pl == 1 && mam == 1) || (pl == 2 && mam == 3) || (pl == 2 && mam == 6)|| (pl == 3 && mam == 3)||(pl == 3 && mam == 4)|| (pl == 3 && mam == 6))
 			{
 				//マウスのボタンが押されたらメインに遷移
 				if (m_mou_l == true)
@@ -208,7 +239,7 @@ void CObjMain::Action()
 		//マウスの位置とクリックする場所で当たり判定（選択肢４）
 		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>215 && m_mou_y < 235)
 		{
-			if ((pl == 1 && mam == 0) || (pl == 1 && mam == 3) || (pl == 2 && mam == 2) || (pl == 3 && mam == 2))
+			if ((pl == 1 && mam == 0) || (pl == 1 && mam == 3)||(pl == 1 && mam == 5) || (pl == 1 && mam == 6) || (pl == 2 && mam == 2) || (pl == 3 && mam == 2) || (pl == 3 && mam == 5) || (pl == 3 && mam == 7))
 			{
 				//マウスのボタンが押されたらメインに遷移
 				if (m_mou_l == true)
