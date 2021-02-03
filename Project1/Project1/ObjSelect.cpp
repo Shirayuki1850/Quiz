@@ -104,6 +104,7 @@ void CObjSelect::Action()
 		int count2 = 0;
 		int count3 = 0;
 		int count4 = 0;
+		int Draw_point = 0;
 
 		for (int i = 0; i < 4; i++)
 		{
@@ -140,6 +141,7 @@ void CObjSelect::Action()
 		
 		count1 = 0;
 		count2 = 0;
+		Draw_point = 0;
 
 		for (int i = 0; i < 4; i++)//ŽÎ‚ß‚ÌŸ—˜ðŒ
 		{
@@ -199,6 +201,7 @@ void CObjSelect::Action()
 
 		count3 = 0;
 		count4 = 0;
+		Draw_point = 0;
 
 		for (int i = 0; i < 4; i++)//ŽÎ‚ß‚ÌŸ—˜ðŒ
 		{

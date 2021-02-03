@@ -10,7 +10,8 @@
 #include "GameL/\DrawTexture.h"
 #include "ObjMain.h"
 #include "GameHead.h"
-#include <time.h>
+#include<time.h>
+#include <stdlib.h>
 
 //使用するネームスペース
 using namespace GameL;
@@ -39,6 +40,10 @@ void CObjMain::Init()
 	f = false;
 	f2 = false;
 	FILE* fp = 0;
+
+	unsigned int seed;
+	seed = (unsigned int)time(NULL);
+	srand(seed);
 
 	if (mam == 9)
 	{
