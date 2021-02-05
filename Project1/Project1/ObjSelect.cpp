@@ -331,19 +331,21 @@ void CObjSelect::Draw()
 
    if (Victory1_flag==true)
    {
-	   Font::StrDraw(L"1PèüÇø", 225, 60, 100, c);
+	   float c1[4] = { 1.0f,0.0f,0.0f,1.0f };
+	   Font::StrDraw(L"1PèüÇø", 225, 60, 100, c1);
    }
 
    if (Victory2_flag==true)
    {
-	   Font::StrDraw(L"2PèüÇø", 225, 60, 100, c);
+	   float c2[4] = { 0.0f,0.0f,2.0f,1.0f };
+	   Font::StrDraw(L"2PèüÇø", 225, 60, 100, c2);
    }
 
    if (Draw_flag == true)
    {
-	   float c1[4] = { 0.0f,0.0f,0.0f,0.0f };
+	   float c3[4] = { 0.0f,0.0f,0.0f,0.0f };
 
-	   Font::StrDraw(L"ìØì_Ç≈Ç∑",225,60,100,c1);
+	   Font::StrDraw(L"ìØì_Ç≈Ç∑",225,60,100,c3);
    }
   
 }
