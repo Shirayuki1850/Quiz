@@ -71,7 +71,14 @@ void CObjMain::Init()
 			break;
 		case 7: fopen_s(&fp, "Quiz26.txt", "rb");
 			break;
-		
+		case 8: fopen_s(&fp, "Quiz17.txt", "rb");
+			break;
+		case 9: fopen_s(&fp, "Quiz34.txt", "rb");
+			break;
+		case 10: fopen_s(&fp, "Quiz35.txt", "rb");
+			break;
+		case 11: fopen_s(&fp, "Quiz36.txt", "rb");
+			break;
 		}
 	   
 		break;
@@ -95,6 +102,14 @@ void CObjMain::Init()
 			break;
 		case 7: fopen_s(&fp, "Quiz31.txt", "rb");
 			break;
+		case 8: fopen_s(&fp, "Quiz37.txt", "rb");
+			break;
+		case 9: fopen_s(&fp, "Quiz38.txt", "rb");
+			break;
+		case 10: fopen_s(&fp, "Quiz39.txt", "rb");
+			break;
+		case 11: fopen_s(&fp, "Quiz40.txt", "rb");
+			break;
 		}
 		break;
 	case 2:
@@ -116,6 +131,14 @@ void CObjMain::Init()
 			break;
 		case 7: fopen_s(&fp, "Quiz21.txt", "rb");
 			break;
+		case 8: fopen_s(&fp, "Quiz41.txt", "rb");
+			break;
+		case 9: fopen_s(&fp, "Quiz42.txt", "rb");
+			break;
+		case 10: fopen_s(&fp, "Quiz43.txt", "rb");
+			break;
+		case 11: fopen_s(&fp, "Quiz44.txt", "rb");
+			break;
 		}
 		break;
 	case 3:
@@ -136,6 +159,14 @@ void CObjMain::Init()
 		case 6: fopen_s(&fp, "Quiz32.txt", "rb");
 			break;
 		case 7: fopen_s(&fp, "Quiz33.txt", "rb");
+			break;
+		case 8: fopen_s(&fp, "Quiz45.txt", "rb");
+			break;
+		case 9: fopen_s(&fp, "Quiz46.txt", "rb");
+			break;
+		case 10: fopen_s(&fp, "Quiz47.txt", "rb");
+			break;
+		case 11: fopen_s(&fp, "Quiz48.txt", "rb");
 			break;
 		}
 		break;
@@ -185,7 +216,9 @@ void CObjMain::Action()
 
 		if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>50 && m_mou_y < 80)
 		{
-			if ((pl == 0 && mam == 0) || (pl == 0 && mam == 3) || (pl == 0 && mam == 4)|| (pl == 0 && mam == 7)|| (pl == 1 && mam == 7)||(pl == 2 && mam == 1) || (pl == 2 && mam == 5)|| (pl == 2 && mam == 7)|| (pl == 3 && mam == 1))
+			if ((pl == 0 && mam == 0) || (pl == 0 && mam == 3) || (pl == 0 && mam == 4)|| (pl == 0 && mam == 7) || (pl == 0 && mam == 8) || (pl == 0 && mam == 11) ||
+				(pl == 1 && mam == 7)|| (pl == 1 && mam == 10) || (pl == 2 && mam == 1) || (pl == 2 && mam == 5)|| (pl == 2 && mam == 7) || (pl == 2 && mam == 10) ||
+				(pl == 3 && mam == 1) ||(pl == 3 && mam == 11))
 			{
 				//マウスのボタンが押されたらメインに遷移
 				if (m_mou_l == true)
@@ -205,7 +238,8 @@ void CObjMain::Action()
 		//マウスの位置とクリックする場所で当たり判定（選択肢２）
 		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>105 && m_mou_y < 125)
 		{
-			if ((pl == 0 && mam == 2) || (pl == 0 && mam == 5)|| (pl == 1 && mam == 4)||(pl == 1 && mam == 2) || (pl == 2 && mam == 0) || (pl == 2 && mam == 4)|| (pl == 3 && mam == 0)|| (pl == 3 && mam == 1))
+			if ((pl == 0 && mam == 2) || (pl == 0 && mam == 5) || (pl == 0 && mam == 10) || (pl == 1 && mam == 4)||(pl == 1 && mam == 2) || (pl == 2 && mam == 0) || (pl == 2 && mam == 4)||
+				(pl == 2 && mam == 9) || (pl == 3 && mam == 0)|| (pl == 3 && mam == 1) || (pl == 3 && mam == 7) || (pl == 3 && mam == 9))
 			{
 				//マウスのボタンが押されたらメインに遷移
 				if (m_mou_l == true)
@@ -224,7 +258,8 @@ void CObjMain::Action()
 		//マウスの位置とクリックする場所で当たり判定（選択肢３）
 		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>160 && m_mou_y < 180)
 		{
-			if ((pl == 0 && mam == 1) || (pl == 0 && mam == 6)|| (pl == 1 && mam == 1) || (pl == 2 && mam == 3) || (pl == 2 && mam == 6)|| (pl == 3 && mam == 3)||(pl == 3 && mam == 4)|| (pl == 3 && mam == 6))
+			if ((pl == 0 && mam == 1) || (pl == 0 && mam == 6) || (pl == 0 && mam == 9) || (pl == 1 && mam == 1) || (pl == 1 && mam == 8) || (pl == 2 && mam == 3) || (pl == 2 && mam == 6) || (pl == 2 && mam == 8) 
+				||(pl == 3 && mam == 3)||(pl == 3 && mam == 4)|| (pl == 3 && mam == 6) || (pl == 3 && mam == 10))
 			{
 				//マウスのボタンが押されたらメインに遷移
 				if (m_mou_l == true)
@@ -244,7 +279,8 @@ void CObjMain::Action()
 		//マウスの位置とクリックする場所で当たり判定（選択肢４）
 		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>215 && m_mou_y < 235)
 		{
-			if ((pl == 1 && mam == 0) || (pl == 1 && mam == 3)||(pl == 1 && mam == 5) || (pl == 1 && mam == 6) || (pl == 2 && mam == 2) || (pl == 3 && mam == 2) || (pl == 3 && mam == 5) || (pl == 3 && mam == 7))
+			if ((pl == 1 && mam == 0) || (pl == 1 && mam == 3)||(pl == 1 && mam == 5) || (pl == 1 && mam == 6) || (pl == 1 && mam == 9) || (pl == 1 && mam == 11) || (pl == 2 && mam == 2) || (pl == 2 && mam == 11) ||
+				(pl == 3 && mam == 2) || (pl == 3 && mam == 5) || (pl == 3 && mam == 8))
 			{
 				//マウスのボタンが押されたらメインに遷移
 				if (m_mou_l == true)
