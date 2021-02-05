@@ -89,7 +89,7 @@ void CObjSelect::Action()
 			{
 				
 				if (b_pp[(pi * 4) + pl] == 0)
-					Scene::SetScene(new CSceneMain(pi, pl, b_pp, 9));
+					Scene::SetScene(new CSceneMain(pi, pl, b_pp, 13));
 			}
 
 		}

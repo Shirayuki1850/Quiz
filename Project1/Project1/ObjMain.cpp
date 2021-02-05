@@ -45,9 +45,9 @@ void CObjMain::Init()
 	seed = (unsigned int)time(NULL);
 	srand(seed);
 
-	if (mam == 9)
+	if (mam == 13)
 	{
-		mam = rand() % 8;
+		mam = rand() % 12;
 	}
 
 	switch (pl)
