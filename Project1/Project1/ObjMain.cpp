@@ -71,7 +71,7 @@ void CObjMain::Init()
 			break;
 		case 7: fopen_s(&fp, "Quiz26.txt", "rb");
 			break;
-		case 8: fopen_s(&fp, "Quiz17.txt", "rb");
+		case 8: fopen_s(&fp, "Quiz27.txt", "rb");
 			break;
 		case 9: fopen_s(&fp, "Quiz34.txt", "rb");
 			break;
@@ -192,7 +192,6 @@ void CObjMain::Action()
 
 	}
 	
-
 	if (Input::GetVKey('J') == true && f == false &&f2==false)//2P
 	{
 		f2 = true;
@@ -208,7 +207,6 @@ void CObjMain::Action()
 
 	//マウスのボタンの状態
 	m_mou_l = Input::GetMouButtonL();
-
 
 	//マウスの位置とクリックする場所で当たり判定(選択肢１)
 	if (Answer_lock == true)
