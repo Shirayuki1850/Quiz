@@ -55,29 +55,29 @@ void CObjMain::Init()
 	case 0:
 		switch (mam)
 		{
-		case 0: fopen_s(&fp, "Quiz1.txt", "rb");//跪く
+		case 0: fopen_s(&fp, "Quiz1.txt", "rb");
 			break;
-		case 1: fopen_s(&fp, "Quiz2.txt", "rb");//徹
+		case 1: fopen_s(&fp, "Quiz2.txt", "rb");
 			break;
-		case 2: fopen_s(&fp, "Quiz3.txt", "rb");//シマウマ
+		case 2: fopen_s(&fp, "Quiz3.txt", "rb");
 			break;
-		case 3: fopen_s(&fp, "Quiz4.txt", "rb");//十二月八日
+		case 3: fopen_s(&fp, "Quiz4.txt", "rb");
 			break;
-		case 4: fopen_s(&fp, "Quiz17.txt", "rb");//応
+		case 4: fopen_s(&fp, "Quiz17.txt", "rb");
 			break;
-		case 5: fopen_s(&fp, "Quiz24.txt", "rb");//こざとへん
+		case 5: fopen_s(&fp, "Quiz24.txt", "rb");
 			break;
-		case 6: fopen_s(&fp, "Quiz25.txt", "rb");//助詞
+		case 6: fopen_s(&fp, "Quiz25.txt", "rb");
 			break;
-		case 7: fopen_s(&fp, "Quiz26.txt", "rb");//詳しく
+		case 7: fopen_s(&fp, "Quiz26.txt", "rb");
 			break;
-		case 8: fopen_s(&fp, "Quiz27.txt", "rb");//一枚
+		case 8: fopen_s(&fp, "Quiz17.txt", "rb");
 			break;
-		case 9: fopen_s(&fp, "Quiz34.txt", "rb");//自立語
+		case 9: fopen_s(&fp, "Quiz34.txt", "rb");
 			break;
-		case 10: fopen_s(&fp, "Quiz35.txt", "rb");//喜寿
+		case 10: fopen_s(&fp, "Quiz35.txt", "rb");
 			break;
-		case 11: fopen_s(&fp, "Quiz36.txt", "rb");//水無月
+		case 11: fopen_s(&fp, "Quiz36.txt", "rb");
 			break;
 		}
 	   
@@ -86,87 +86,87 @@ void CObjMain::Init()
 	case 1:
 		switch (mam)
 		{
-		case 0: fopen_s(&fp, "Quiz5.txt", "rb");//Good afternoon
+		case 0: fopen_s(&fp, "Quiz5.txt", "rb");
 			break;
-		case 1: fopen_s(&fp, "Quiz6.txt", "rb");//しばしば
+		case 1: fopen_s(&fp, "Quiz6.txt", "rb");
 			break;
-		case 2: fopen_s(&fp, "Quiz7.txt", "rb");//悲劇
+		case 2: fopen_s(&fp, "Quiz7.txt", "rb");
 			break;
-		case 3: fopen_s(&fp, "Quiz8.txt", "rb");//ラーコン
+		case 3: fopen_s(&fp, "Quiz8.txt", "rb");
 			break;
-		case 4: fopen_s(&fp, "Quiz28.txt", "rb");//positive
+		case 4: fopen_s(&fp, "Quiz28.txt", "rb");
 			break;
-		case 5: fopen_s(&fp, "Quiz29.txt", "rb");//黒
+		case 5: fopen_s(&fp, "Quiz29.txt", "rb");
 			break;
-		case 6: fopen_s(&fp, "Quiz30.txt", "rb");//deer
+		case 6: fopen_s(&fp, "Quiz30.txt", "rb");
 			break;
-		case 7: fopen_s(&fp, "Quiz31.txt", "rb");//baked rice
+		case 7: fopen_s(&fp, "Quiz31.txt", "rb");
 			break;
-		case 8: fopen_s(&fp, "Quiz37.txt", "rb");//グーテン　モルゲン
+		case 8: fopen_s(&fp, "Quiz37.txt", "rb");
 			break;
-		case 9: fopen_s(&fp, "Quiz38.txt", "rb");//カリメーラ
+		case 9: fopen_s(&fp, "Quiz38.txt", "rb");
 			break;
-		case 10: fopen_s(&fp, "Quiz39.txt", "rb");//スパシィーバ
+		case 10: fopen_s(&fp, "Quiz39.txt", "rb");
 			break;
-		case 11: fopen_s(&fp, "Quiz40.txt", "rb");//ジャクーユ
+		case 11: fopen_s(&fp, "Quiz40.txt", "rb");
 			break;
 		}
 		break;
 	case 2:
 		switch (mam)
 		{
-		case 0: fopen_s(&fp, "Quiz9.txt", "rb");//択捉島
+		case 0: fopen_s(&fp, "Quiz9.txt", "rb");
 			break;
-		case 1: fopen_s(&fp, "Quiz10.txt", "rb");//常会
+		case 1: fopen_s(&fp, "Quiz10.txt", "rb");
 			break;
-		case 2: fopen_s(&fp, "Quiz11.txt", "rb");//14
+		case 2: fopen_s(&fp, "Quiz11.txt", "rb");
 			break;
-		case 3: fopen_s(&fp, "Quiz12.txt", "rb");//気温・風・降水量
+		case 3: fopen_s(&fp, "Quiz12.txt", "rb");
 			break;
-		case 4: fopen_s(&fp, "Quiz18.txt", "rb");//シルクロード
+		case 4: fopen_s(&fp, "Quiz18.txt", "rb");
 			break;
-		case 5: fopen_s(&fp, "Quiz19.txt", "rb");//デンマーク
+		case 5: fopen_s(&fp, "Quiz19.txt", "rb");
 			break;
-		case 6: fopen_s(&fp, "Quiz20.txt", "rb");//スミス
+		case 6: fopen_s(&fp, "Quiz20.txt", "rb");
 			break;
-		case 7: fopen_s(&fp, "Quiz21.txt", "rb");//チンギス・ハン
+		case 7: fopen_s(&fp, "Quiz21.txt", "rb");
 			break;
-		case 8: fopen_s(&fp, "Quiz41.txt", "rb");//◎
+		case 8: fopen_s(&fp, "Quiz41.txt", "rb");
 			break;
-		case 9: fopen_s(&fp, "Quiz42.txt", "rb");//サハラ砂漠
+		case 9: fopen_s(&fp, "Quiz42.txt", "rb");
 			break;
-		case 10: fopen_s(&fp, "Quiz43.txt", "rb");//岩宿遺跡
+		case 10: fopen_s(&fp, "Quiz43.txt", "rb");
 			break;
-		case 11: fopen_s(&fp, "Quiz44.txt", "rb");//パキスタン
+		case 11: fopen_s(&fp, "Quiz44.txt", "rb");
 			break;
 		}
 		break;
 	case 3:
 		switch (mam)
 		{
-		case 0: fopen_s(&fp, "Quiz13.txt", "rb");//デビルメイクライ
+		case 0: fopen_s(&fp, "Quiz13.txt", "rb");
 			break;
-		case 1: fopen_s(&fp, "Quiz14.txt", "rb");//スロウ
+		case 1: fopen_s(&fp, "Quiz14.txt", "rb");
 			break;
-		case 2: fopen_s(&fp, "Quiz15.txt", "rb");//YURUSHITE
+		case 2: fopen_s(&fp, "Quiz15.txt", "rb");
 			break;
-		case 3: fopen_s(&fp, "Quiz16.txt", "rb");//ノコノコタウン
+		case 3: fopen_s(&fp, "Quiz16.txt", "rb");
 			break;
-		case 4: fopen_s(&fp, "Quiz22.txt", "rb");//4本
+		case 4: fopen_s(&fp, "Quiz22.txt", "rb");
 			break;
-		case 5: fopen_s(&fp, "Quiz23.txt", "rb");//Newニンテンドー2DS LL
+		case 5: fopen_s(&fp, "Quiz23.txt", "rb");
 			break;
-		case 6: fopen_s(&fp, "Quiz32.txt", "rb");//+4900
+		case 6: fopen_s(&fp, "Quiz32.txt", "rb");
 			break;
-		case 7: fopen_s(&fp, "Quiz33.txt", "rb");//リンゴ+ヤギのバター
+		case 7: fopen_s(&fp, "Quiz33.txt", "rb");
 			break;
-		case 8: fopen_s(&fp, "Quiz45.txt", "rb");//ルーク
+		case 8: fopen_s(&fp, "Quiz45.txt", "rb");
 			break;
-		case 9: fopen_s(&fp, "Quiz46.txt", "rb");//PlayStation Portable
+		case 9: fopen_s(&fp, "Quiz46.txt", "rb");
 			break;
-		case 10: fopen_s(&fp, "Quiz47.txt", "rb");//メタルギアソリッド
+		case 10: fopen_s(&fp, "Quiz47.txt", "rb");
 			break;
-		case 11: fopen_s(&fp, "Quiz48.txt", "rb");//テトリス
+		case 11: fopen_s(&fp, "Quiz48.txt", "rb");
 			break;
 		}
 		break;
@@ -176,6 +176,7 @@ void CObjMain::Init()
 		fgetws(str1[i], 99, fp);
 
 	fclose(fp);
+
 }
 
 //アクション
@@ -215,7 +216,7 @@ void CObjMain::Action()
 
 		if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>50 && m_mou_y < 80)
 		{
-			if ((pl == 0 && mam == 0) || (pl == 0 && mam == 3) || (pl == 0 && mam == 4)|| (pl == 0 && mam == 7)  || (pl == 0 && mam == 11) ||
+			if ((pl == 0 && mam == 0) || (pl == 0 && mam == 3) || (pl == 0 && mam == 4)|| (pl == 0 && mam == 7) || (pl == 0 && mam == 8) || (pl == 0 && mam == 11) ||
 				(pl == 1 && mam == 7)|| (pl == 1 && mam == 10) || (pl == 2 && mam == 1) || (pl == 2 && mam == 5)|| (pl == 2 && mam == 7) || (pl == 2 && mam == 10) ||
 				(pl == 3 && mam == 1) ||(pl == 3 && mam == 11))
 			{
@@ -278,7 +279,7 @@ void CObjMain::Action()
 		//マウスの位置とクリックする場所で当たり判定（選択肢４）
 		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>215 && m_mou_y < 235)
 		{
-			if ((pl == 1 && mam == 0) || (pl == 0 && mam == 8) || (pl == 1 && mam == 3)||(pl == 1 && mam == 5) || (pl == 1 && mam == 6) || (pl == 1 && mam == 9) || (pl == 1 && mam == 11) || (pl == 2 && mam == 2) || (pl == 2 && mam == 11) ||
+			if ((pl == 1 && mam == 0) || (pl == 1 && mam == 3)||(pl == 1 && mam == 5) || (pl == 1 && mam == 6) || (pl == 1 && mam == 9) || (pl == 1 && mam == 11) || (pl == 2 && mam == 2) || (pl == 2 && mam == 11) ||
 				(pl == 3 && mam == 2) || (pl == 3 && mam == 5) || (pl == 3 && mam == 8))
 			{
 				//マウスのボタンが押されたらメインに遷移
@@ -314,18 +315,28 @@ void CObjMain::Draw()
 		y += 50;
 	}
 	
-	Font::StrDraw(L"1P::Fキーまたは2P::Jキーで回答権獲得", 50, 300, 40, c);
+
+	Font::StrDraw(L"1P::Fキーまたは2P::Jキーで回答権獲得", 140, 300, 30, c);
 	if (f == true)
 	{
 		float c1[4] = { 1,0,0,1 };
 
-		Font::StrDraw(L"1P答えをどうぞ。", 210, 360, 50, c1);
+		Font::StrDraw(L"1P答えをどうぞ。", 210, 350, 50, c1);
 	}
 	
 	if (f2 == true)
 	{
 		float c2[4] = { 0,0,1,1 };
 
-		Font::StrDraw(L"2P答えをどうぞ。", 210, 360, 50, c2);
+		Font::StrDraw(L"2P答えをどうぞ。", 210, 400, 50, c2);
 	}
+
+	/*
+	//仮マウス位置表示
+	
+	wchar_t str[256];
+	swprintf_s(str, L"x=%f,y=%f", m_mou_x, m_mou_y);
+	Font::StrDraw(str, 20, 20, 12, c);
+	*/
+
 }
