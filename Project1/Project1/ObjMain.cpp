@@ -55,118 +55,118 @@ void CObjMain::Init()
 	case 0:
 		switch (mam)
 		{
-		case 0: fopen_s(&fp, "Quiz1.txt", "rb");
+		case 0: fopen_s(&fp, "Quiz1.txt", "rb");//跪く
 			break;
-		case 1: fopen_s(&fp, "Quiz2.txt", "rb");
+		case 1: fopen_s(&fp, "Quiz2.txt", "rb");//徹
 			break;
-		case 2: fopen_s(&fp, "Quiz3.txt", "rb");
+		case 2: fopen_s(&fp, "Quiz3.txt", "rb");//シマウマ
 			break;
-		case 3: fopen_s(&fp, "Quiz4.txt", "rb");
+		case 3: fopen_s(&fp, "Quiz4.txt", "rb");//十二月八日
 			break;
-		case 4: fopen_s(&fp, "Quiz17.txt", "rb");
+		case 4: fopen_s(&fp, "Quiz17.txt", "rb");//応
 			break;
-		case 5: fopen_s(&fp, "Quiz24.txt", "rb");
+		case 5: fopen_s(&fp, "Quiz24.txt", "rb");//こざとへん
 			break;
-		case 6: fopen_s(&fp, "Quiz25.txt", "rb");
+		case 6: fopen_s(&fp, "Quiz25.txt", "rb");//助詞
 			break;
-		case 7: fopen_s(&fp, "Quiz26.txt", "rb");
+		case 7: fopen_s(&fp, "Quiz26.txt", "rb");//詳しく
 			break;
-		case 8: fopen_s(&fp, "Quiz27.txt", "rb");
+		case 8: fopen_s(&fp, "Quiz27.txt", "rb");//一枚
 			break;
-		case 9: fopen_s(&fp, "Quiz34.txt", "rb");
+		case 9: fopen_s(&fp, "Quiz34.txt", "rb");//自立語
 			break;
-		case 10: fopen_s(&fp, "Quiz35.txt", "rb");
+		case 10: fopen_s(&fp, "Quiz35.txt", "rb");//喜寿
 			break;
-		case 11: fopen_s(&fp, "Quiz36.txt", "rb");
+		case 11: fopen_s(&fp, "Quiz36.txt", "rb");//水無月
 			break;
 		}
-	   
+
 		break;
 
 	case 1:
 		switch (mam)
 		{
-		case 0: fopen_s(&fp, "Quiz5.txt", "rb");
+		case 0: fopen_s(&fp, "Quiz5.txt", "rb");//Good afternoon
 			break;
-		case 1: fopen_s(&fp, "Quiz6.txt", "rb");
+		case 1: fopen_s(&fp, "Quiz6.txt", "rb");//しばしば
 			break;
-		case 2: fopen_s(&fp, "Quiz7.txt", "rb");
+		case 2: fopen_s(&fp, "Quiz7.txt", "rb");//悲劇
 			break;
-		case 3: fopen_s(&fp, "Quiz8.txt", "rb");
+		case 3: fopen_s(&fp, "Quiz8.txt", "rb");//ラーコン
 			break;
-		case 4: fopen_s(&fp, "Quiz28.txt", "rb");
+		case 4: fopen_s(&fp, "Quiz28.txt", "rb");//positive
 			break;
-		case 5: fopen_s(&fp, "Quiz29.txt", "rb");
+		case 5: fopen_s(&fp, "Quiz29.txt", "rb");//黒
 			break;
-		case 6: fopen_s(&fp, "Quiz30.txt", "rb");
+		case 6: fopen_s(&fp, "Quiz30.txt", "rb");//deer
 			break;
-		case 7: fopen_s(&fp, "Quiz31.txt", "rb");
+		case 7: fopen_s(&fp, "Quiz31.txt", "rb");//baked rice
 			break;
-		case 8: fopen_s(&fp, "Quiz37.txt", "rb");
+		case 8: fopen_s(&fp, "Quiz37.txt", "rb");//グーテン　モルゲン
 			break;
-		case 9: fopen_s(&fp, "Quiz38.txt", "rb");
+		case 9: fopen_s(&fp, "Quiz38.txt", "rb");//カリメーラ
 			break;
-		case 10: fopen_s(&fp, "Quiz39.txt", "rb");
+		case 10: fopen_s(&fp, "Quiz39.txt", "rb");//スパシィーバ
 			break;
-		case 11: fopen_s(&fp, "Quiz40.txt", "rb");
+		case 11: fopen_s(&fp, "Quiz40.txt", "rb");//ジャクーユ
 			break;
 		}
 		break;
 	case 2:
 		switch (mam)
 		{
-		case 0: fopen_s(&fp, "Quiz9.txt", "rb");
+		case 0: fopen_s(&fp, "Quiz9.txt", "rb");//択捉島
 			break;
-		case 1: fopen_s(&fp, "Quiz10.txt", "rb");
+		case 1: fopen_s(&fp, "Quiz10.txt", "rb");//常会
 			break;
-		case 2: fopen_s(&fp, "Quiz11.txt", "rb");
+		case 2: fopen_s(&fp, "Quiz11.txt", "rb");//14
 			break;
-		case 3: fopen_s(&fp, "Quiz12.txt", "rb");
+		case 3: fopen_s(&fp, "Quiz12.txt", "rb");//気温・風・降水量
 			break;
-		case 4: fopen_s(&fp, "Quiz18.txt", "rb");
+		case 4: fopen_s(&fp, "Quiz18.txt", "rb");//シルクロード
 			break;
-		case 5: fopen_s(&fp, "Quiz19.txt", "rb");
+		case 5: fopen_s(&fp, "Quiz19.txt", "rb");//デンマーク
 			break;
-		case 6: fopen_s(&fp, "Quiz20.txt", "rb");
+		case 6: fopen_s(&fp, "Quiz20.txt", "rb");//スミス
 			break;
-		case 7: fopen_s(&fp, "Quiz21.txt", "rb");
+		case 7: fopen_s(&fp, "Quiz21.txt", "rb");//チンギス・ハン
 			break;
-		case 8: fopen_s(&fp, "Quiz41.txt", "rb");
+		case 8: fopen_s(&fp, "Quiz41.txt", "rb");//◎
 			break;
-		case 9: fopen_s(&fp, "Quiz42.txt", "rb");
+		case 9: fopen_s(&fp, "Quiz42.txt", "rb");//サハラ砂漠
 			break;
-		case 10: fopen_s(&fp, "Quiz43.txt", "rb");
+		case 10: fopen_s(&fp, "Quiz43.txt", "rb");//岩宿遺跡
 			break;
-		case 11: fopen_s(&fp, "Quiz44.txt", "rb");
+		case 11: fopen_s(&fp, "Quiz44.txt", "rb");//パキスタン
 			break;
 		}
 		break;
 	case 3:
 		switch (mam)
 		{
-		case 0: fopen_s(&fp, "Quiz13.txt", "rb");
+		case 0: fopen_s(&fp, "Quiz13.txt", "rb");//デビルメイクライ
 			break;
-		case 1: fopen_s(&fp, "Quiz14.txt", "rb");
+		case 1: fopen_s(&fp, "Quiz14.txt", "rb");//スロウ
 			break;
-		case 2: fopen_s(&fp, "Quiz15.txt", "rb");
+		case 2: fopen_s(&fp, "Quiz15.txt", "rb");//YURUSHITE
 			break;
-		case 3: fopen_s(&fp, "Quiz16.txt", "rb");
+		case 3: fopen_s(&fp, "Quiz16.txt", "rb");//ノコノコタウン
 			break;
-		case 4: fopen_s(&fp, "Quiz22.txt", "rb");
+		case 4: fopen_s(&fp, "Quiz22.txt", "rb");//4本
 			break;
-		case 5: fopen_s(&fp, "Quiz23.txt", "rb");
+		case 5: fopen_s(&fp, "Quiz23.txt", "rb");//Newニンテンドー2DS LL
 			break;
-		case 6: fopen_s(&fp, "Quiz32.txt", "rb");
+		case 6: fopen_s(&fp, "Quiz32.txt", "rb");//+4900
 			break;
-		case 7: fopen_s(&fp, "Quiz33.txt", "rb");
+		case 7: fopen_s(&fp, "Quiz33.txt", "rb");//リンゴ+ヤギのバター
 			break;
-		case 8: fopen_s(&fp, "Quiz45.txt", "rb");
+		case 8: fopen_s(&fp, "Quiz45.txt", "rb");//ルーク
 			break;
-		case 9: fopen_s(&fp, "Quiz46.txt", "rb");
+		case 9: fopen_s(&fp, "Quiz46.txt", "rb");//PlayStation Portable
 			break;
-		case 10: fopen_s(&fp, "Quiz47.txt", "rb");
+		case 10: fopen_s(&fp, "Quiz47.txt", "rb");//メタルギアソリッド
 			break;
-		case 11: fopen_s(&fp, "Quiz48.txt", "rb");
+		case 11: fopen_s(&fp, "Quiz48.txt", "rb");//テトリス
 			break;
 		}
 		break;
