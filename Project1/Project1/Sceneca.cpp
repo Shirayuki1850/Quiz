@@ -7,7 +7,7 @@
 #include "GameL/DrawFont.h"
 #include "GameL/DrawTexture.h"
 #include "GameL/WinInputs.h"
-
+#include "GameL/Audio.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -53,6 +53,12 @@ void CSceneca::InitScene()
 	//カーソル作成
 	CObjmouse* obj = new CObjmouse();
 	Objs::InsertObj(obj, OBJ_MOUSE, 2);
+
+	//正解の時のSEを鳴らす
+
+	Audio::LoadAudio(4, L"seikai.wav", EFFECT);//ボタン押した時のSE
+	Audio::Start(4);
+
 }
 
 //ゲームメイン実行中メソッド

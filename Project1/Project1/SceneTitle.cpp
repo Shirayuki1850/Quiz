@@ -7,6 +7,7 @@
 #include "GameL/DrawFont.h"
 #include "GameL/WinInputs.h"
 #include"GameL\DrawTexture.h"
+#include "GameL/Audio.h"
 
 
 //使用するネームスペース
@@ -50,6 +51,14 @@ void CSceneTitle::InitScene()
 	CObjmouse* obj1 = new CObjmouse();
 	Objs::InsertObj(obj1, OBJ_MOUSE, 2);
 	
+	Audio::LoadAudio(0, L"BGM1.wav", SOUND_TYPE::BACK_MUSIC);//BGM1
+	
+	//バックミュージックスタート
+	float v = Audio::VolumeMaster(0);//マスターボリューム
+	v = Audio::VolumeMaster((1.0f - v));
+
+	Audio::Start(0);//音楽スタート
+
 }
 
 //ゲームメイン実行中メソッド

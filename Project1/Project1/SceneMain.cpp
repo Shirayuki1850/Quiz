@@ -10,6 +10,8 @@
 #include<math.h>
 #include<stdio.h>
 
+#include "GameL/Audio.h"
+
 
 //使用するネームスペース
 using namespace GameL;
@@ -55,14 +57,21 @@ void CSceneMain::InitScene()
 	//カーソル作成
 	CObjmouse* obj = new CObjmouse();
 	Objs::InsertObj(obj, OBJ_MOUSE, 2);
-
-
-
 	
 	//	読み込みモードでファイルを開く
 	/*fopen_s(&fp, "Quiz1.txt", "rb");*/
 
+	//音楽情報の読み込み
+	Audio::LoadAudio(2, L"BGM3.wav",SOUND_TYPE::BACK_MUSIC);//BGM3
 
+	//バックミュージックスタート
+	float v = Audio::VolumeMaster(0);//マスターボリューム
+	v = Audio::VolumeMaster((1.0f - v));
+
+	Audio::Start(2);//音楽スタート
+
+	//ボタンが押された時のSEを鳴らす
+	Audio::LoadAudio(3, L"botan.wav", EFFECT);//ボタン押した時のSE
 
 
 }

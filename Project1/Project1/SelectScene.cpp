@@ -6,6 +6,7 @@
 #include "GameL/SceneObjManager.h"
 #include "GameL/DrawFont.h"
 #include"GameL\DrawTexture.h"
+#include "GameL/Audio.h"
 
 //使用するネームスペース
 using namespace GameL;
@@ -66,6 +67,20 @@ void CSelectScene::InitScene()
 	//カーソル作成
 	CObjmouse* obj = new CObjmouse();
 	Objs::InsertObj(obj, OBJ_MOUSE, 2);
+
+	//音楽情報の読み込み
+	Audio::LoadAudio(1, L"BGM2.wav", SOUND_TYPE::BACK_MUSIC);//BGM2
+	Audio::LoadAudio(6, L"seikai.wav", EFFECT);//勝利効果音
+
+	//バックミュージックスタート
+	float v = Audio::VolumeMaster(0);//マスターボリューム
+	v = Audio::VolumeMaster((1.0f - v));
+
+	Audio::Start(1);//音楽スタート
+	
+
+	
+	
 }
 
 //ゲームタイトル実行メソッド

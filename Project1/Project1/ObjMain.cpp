@@ -8,6 +8,7 @@
 #include "GameL/SceneManager.h"
 #include "GameL/\DrawFont.h"
 #include "GameL/\DrawTexture.h"
+#include "GameL/Audio.h"
 #include "ObjMain.h"
 #include "GameHead.h"
 #include<time.h>
@@ -185,6 +186,8 @@ void CObjMain::Action()
 
 	if (Input::GetVKey('F') == true&&f==false && f2 == false) //1P
 	{
+		//ボタンが押された時にSEを鳴らす
+		Audio::Start(3);
 
 		f = true;
 		b_pp[(pi * 4) + pl] = 1;
@@ -194,6 +197,9 @@ void CObjMain::Action()
 	
 	if (Input::GetVKey('J') == true && f == false &&f2==false)//2P
 	{
+		//ボタンが押された時にSEを鳴らす
+		Audio::Start(3);
+
 		f2 = true;
 		f = false;
 		Answer_lock = true;
