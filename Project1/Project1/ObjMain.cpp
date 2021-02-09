@@ -320,7 +320,7 @@ void CObjMain::Draw()
 	}
 	
 
-	Font::StrDraw(L"1P::Fキーまたは2P::Jキーで回答権獲得", 50, 300, 40, c);
+	Font::StrDraw(L"1P::Fキーまたは2P::Jキーで解答権獲得", 50, 300, 40, c);
 	if (f == true)
 	{
 		float c1[4] = { 1,0,0,1 };
