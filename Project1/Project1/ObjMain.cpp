@@ -218,7 +218,7 @@ void CObjMain::Action()
 	if (Answer_lock == true)
 	{
 
-		if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>50 && m_mou_y < 80)
+		if (m_mou_x > 7 && m_mou_x < 300 && m_mou_y>50 && m_mou_y < 80)
 		{
 			if ((pl == 0 && mam == 0) || (pl == 0 && mam == 3) || (pl == 0 && mam == 4)|| (pl == 0 && mam == 7)  || (pl == 0 && mam == 11) ||
 				(pl == 1 && mam == 7)|| (pl == 1 && mam == 10) || (pl == 2 && mam == 1) || (pl == 2 && mam == 5)|| (pl == 2 && mam == 7) || (pl == 2 && mam == 10) ||
@@ -240,7 +240,7 @@ void CObjMain::Action()
 
 		}
 		//マウスの位置とクリックする場所で当たり判定（選択肢２）
-		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>105 && m_mou_y < 125)
+		else if (m_mou_x > 7 && m_mou_x < 300 && m_mou_y>105 && m_mou_y < 125)
 		{
 			if ((pl == 0 && mam == 2) || (pl == 0 && mam == 5) || (pl == 0 && mam == 10) || (pl == 1 && mam == 4)||(pl == 1 && mam == 2) || (pl == 2 && mam == 0) || (pl == 2 && mam == 4)||
 				(pl == 2 && mam == 9) || (pl == 3 && mam == 0)|| (pl == 3 && mam == 1) || (pl == 3 && mam == 7) || (pl == 3 && mam == 9))
@@ -260,7 +260,7 @@ void CObjMain::Action()
 			}
 		}
 		//マウスの位置とクリックする場所で当たり判定（選択肢３）
-		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>160 && m_mou_y < 180)
+		else if (m_mou_x > 7 && m_mou_x < 300 && m_mou_y>160 && m_mou_y < 180)
 		{
 			if ((pl == 0 && mam == 1) || (pl == 0 && mam == 6) || (pl == 0 && mam == 9) || (pl == 1 && mam == 1) || (pl == 1 && mam == 8) || (pl == 2 && mam == 3) || (pl == 2 && mam == 6) || (pl == 2 && mam == 8) 
 				||(pl == 3 && mam == 3)||(pl == 3 && mam == 4)|| (pl == 3 && mam == 6) || (pl == 3 && mam == 10))
@@ -281,7 +281,7 @@ void CObjMain::Action()
 			}
 		}
 		//マウスの位置とクリックする場所で当たり判定（選択肢４）
-		else if (m_mou_x > 7 && m_mou_x < 104 && m_mou_y>215 && m_mou_y < 235)
+		else if (m_mou_x > 7 && m_mou_x < 300 && m_mou_y>215 && m_mou_y < 235)
 		{
 			if ((pl == 1 && mam == 0) || (pl == 0 && mam == 8) || (pl == 1 && mam == 3)||(pl == 1 && mam == 5) || (pl == 1 && mam == 6) || (pl == 1 && mam == 9) || (pl == 1 && mam == 11) || (pl == 2 && mam == 2) || (pl == 2 && mam == 11) ||
 				(pl == 3 && mam == 2) || (pl == 3 && mam == 5) || (pl == 3 && mam == 8))
@@ -320,18 +320,18 @@ void CObjMain::Draw()
 	}
 	
 
-	Font::StrDraw(L"1P::Fキーまたは2P::Jキーで解答権獲得", 50, 300, 40, c);
+	Font::StrDraw(L"1P::Fキーまたは2P::Jキーで解答権獲得", 50, 360, 40, c);
 	if (f == true)
 	{
 		float c1[4] = { 1,0,0,1 };
 
-		Font::StrDraw(L"1P答えをどうぞ。", 210, 360, 50, c1);
+		Font::StrDraw(L"1P答えをどうぞ。", 210, 450, 50, c1);
 	}
 	
 	if (f2 == true)
 	{
 		float c2[4] = { 0,0,1,1 };
 
-		Font::StrDraw(L"2P答えをどうぞ。", 210, 360, 50, c2);
+		Font::StrDraw(L"2P答えをどうぞ。", 210, 450, 50, c2);
 	}
 }

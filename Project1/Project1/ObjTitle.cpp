@@ -40,7 +40,7 @@ void CObjTitle::Action()
 	m_mou_l = Input::GetMouButtonL();
 
 	//マウスの位置とクリックする場所で当たり判定
-	if (m_mou_x > 225 && m_mou_x < 570 && m_mou_y>400 && m_mou_y < 450)
+	if (m_mou_x > 180 && m_mou_x < 615 && m_mou_y>400 && m_mou_y < 500)
 	{
 		//マウスのボタンが押されたらメインに遷移
 		if (m_mou_l == true)

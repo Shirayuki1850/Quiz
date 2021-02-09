@@ -255,17 +255,23 @@ void CObjSelect::Draw()
 	if (Victory1_flag == false && Victory2_flag == false)
 	{
 		//説明
-		Font::StrDraw(L"ジャンルを選択してください", 125, 60, 45, c);
+		Font::StrDraw(L"好きなパネルを押してください。", 80, 90, 45, c);
 	}
  
    //ジャンルをクリックする場所
-   Font::StrDraw(L"国語", 100, 200, 30, c);
 
-   Font::StrDraw(L"外国語", 100, 300, 30, c);
+	float f1[4] = { 1.0f,0.0f,0.0f,1.0f };
+	float f2[4] = { 0.0f,0.0f,1.0f,1.0f };
+	float f3[4] = { 1.0f,1.0f,0.0f,1.0f };
+	float f4[4] = { 0.0f,1.0f,0.0f,1.0f };
 
-   Font::StrDraw(L"社会", 100, 400, 30, c);
+   Font::StrDraw(L" 国語", 170, 210, 30, f1);
 
-   Font::StrDraw(L"ゲーム関連", 100, 500, 30, c);
+   Font::StrDraw(L"外国語", 170, 310, 30, f2);
+
+   Font::StrDraw(L" 社会", 170, 410, 30, f3);
+
+   Font::StrDraw(L"ゲーム", 170, 510, 30, f4);
 
    //切り取り位置の設定
    src.m_top = 0.0f;
