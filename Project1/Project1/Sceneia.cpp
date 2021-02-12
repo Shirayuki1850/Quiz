@@ -40,6 +40,7 @@ CSceneia::~CSceneia()
 void CSceneia::InitScene()
 {
 	Draw::LoadImage(L"Seigo1.png", 20, TEX_SIZE_1024);
+	Draw::LoadImage(L"white.png", 0, TEX_SIZE_1024);
 
 	//背景オブジェクト作成
 	CObjBackground* back = new CObjBackground();

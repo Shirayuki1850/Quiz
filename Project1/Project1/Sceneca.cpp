@@ -16,6 +16,7 @@ using namespace GameL;
 #include "SceneMain.h"
 #include "GameHead.h"
 #include "Objca.h"
+#include "SelectScene.h"
 
 //コンストラクタ
 CSceneca::CSceneca(int x,int y,int pp[16])
@@ -38,6 +39,7 @@ CSceneca::~CSceneca()
 void CSceneca::InitScene()
 {
 	Draw::LoadImage(L"Seigo1.png", 20, TEX_SIZE_1024);
+	Draw::LoadImage(L"white.png", 0, TEX_SIZE_1024);
 
 	//背景オブジェクト作成
 	CObjBackground* back = new CObjBackground();

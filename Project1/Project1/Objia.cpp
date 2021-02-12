@@ -1,6 +1,7 @@
 //使用するヘッダーファイル
 #include "GameL/DrawFont.h"
 #include "GameL/WinInputs.h"
+#include"GameL/DrawTexture.h"
 
 #include "GameHead.h"
 #include "Objca.h"
@@ -58,9 +59,25 @@ void CObjia::Draw()
 
 	float c[4] = { 1,1,1,1 };
 
+	float c2[4] = { 0,0,0,1 };
+
+	RECT_F src;
+	RECT_F dst;
+
+	src.m_top = 0.0f;
+	src.m_left = 0.0f;
+	src.m_right = 128.0f;
+	src.m_bottom = 128.0f;
+
+	dst.m_top = 380.0f;
+	dst.m_left = 70.0f;
+	dst.m_right = 770.0f;
+	dst.m_bottom = 450.0f;
+
+	Draw::Draw(0, &src, &dst, c2, 0);
 	//タイトル
 	Font::StrDraw(L"不正解", 170, 130, 150, c1);
 
-	Font::StrDraw(L"問題へ戻る", 235, 380, 70, c);
+	Font::StrDraw(L"ここ押してください", 100, 380, 70, c);
 
 }

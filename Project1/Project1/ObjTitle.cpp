@@ -54,7 +54,8 @@ void CObjTitle::Action()
 void CObjTitle::Draw()
 {
 
-	float c[4] = { 1,1,1,1 };
+	float c[4] = { 1,1,1,1 };//タイトルカラー
+	float t[4] = { 0,0,1,1 };//クリックカラー
 
 	/*//仮マウス位置表示
 	wchar_t str[256];
@@ -64,7 +65,7 @@ void CObjTitle::Draw()
 	//タイトル
 	Font::StrDraw(L"Re：Panel Connection", 35, 200, 75, c);
 
-	Font::StrDraw(L"Click Start", 225, 400, 64, c);
+	Font::StrDraw(L"Click Start", 225, 400, 64, t);
 
 	
 

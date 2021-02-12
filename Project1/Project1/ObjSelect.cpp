@@ -237,6 +237,7 @@ void CObjSelect::Action()
 void CObjSelect::Draw()
 {
 	float c[4] = { 1.0f,1.0f,1.0f,1.0f };
+	float b_c[4] = { 0.0f,0.0f,0.0f,1.0f };
 
 	//仮マウス位置表示
 	/*
@@ -246,6 +247,36 @@ void CObjSelect::Draw()
 	*/
 	RECT_F src;
 	RECT_F dst;
+
+	RECT_F src2;
+	RECT_F dst2;
+
+	src2.m_bottom = 0.0f;
+	src2.m_left = 0.0f;
+	src2.m_right = 128.0f;
+	src2.m_top = 128.0f;
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (i == 0 || i == 2)
+		{
+			dst2.m_top = 180.0f + (i * 100);
+			dst2.m_left = 140.0f;
+			dst2.m_right = 700.0f;
+			dst2.m_bottom = 270.0f + (i * 100);
+		}
+		if (i == 1 || i == 3)
+		{
+			dst2.m_top = 180.0f + (i * 100);
+			dst2.m_left = 140.0f;
+			dst2.m_right = 700.0f;
+			dst2.m_bottom = 270.0f + (i * 100);
+		}
+		
+
+		Draw::Draw(21, &src2, &dst2, b_c, 0);
+	}
+	
 	
 
 	int p=2;
@@ -261,17 +292,22 @@ void CObjSelect::Draw()
    //ジャンルをクリックする場所
 
 	float f1[4] = { 1.0f,0.0f,0.0f,1.0f };
-	float f2[4] = { 0.0f,0.0f,1.0f,1.0f };
+	float f2[4] = { 0.5f,0.5f,1.0f,1.0f };
 	float f3[4] = { 1.0f,1.0f,0.0f,1.0f };
 	float f4[4] = { 0.0f,1.0f,0.0f,1.0f };
 
-   Font::StrDraw(L" 国語", 170, 210, 30, f1);
+   Font::StrDraw(L"国語", 170, 210, 30, f1);
 
    Font::StrDraw(L"外国語", 170, 310, 30, f2);
 
-   Font::StrDraw(L" 社会", 170, 410, 30, f3);
+   Font::StrDraw(L"社会", 170, 410, 30, f3);
 
    Font::StrDraw(L"ゲーム", 170, 510, 30, f4);
+
+  
+
+  
+  
 
    //切り取り位置の設定
    src.m_top = 0.0f;
@@ -335,6 +371,8 @@ void CObjSelect::Draw()
 		  x += 100;
 	  }
    }
+
+   
 
    if (Victory1_flag==true)
    {
