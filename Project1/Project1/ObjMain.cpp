@@ -243,7 +243,7 @@ void CObjMain::Action()
 		else if (m_mou_x > 7 && m_mou_x < 300 && m_mou_y>105 && m_mou_y < 125)
 		{
 			if ((pl == 0 && mam == 2) || (pl == 0 && mam == 5) || (pl == 0 && mam == 10) || (pl == 1 && mam == 4)||(pl == 1 && mam == 2) || (pl == 2 && mam == 0) || (pl == 2 && mam == 4)||
-				(pl == 2 && mam == 9) || (pl == 3 && mam == 0)|| (pl == 3 && mam == 1) || (pl == 3 && mam == 7) || (pl == 3 && mam == 9))
+				(pl == 2 && mam == 9) || (pl == 3 && mam == 0)|| (pl == 3 && mam == 7) || (pl == 3 && mam == 9))
 			{
 				//マウスのボタンが押されたらメインに遷移
 				if (m_mou_l == true)
